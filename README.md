@@ -9,7 +9,7 @@ Reproducibility code for a study of whether **large-language-model (LLM) estimat
 | # | Component | Description |
 |---|------------|-------------|
 | 1 | 🧮 **LLM difficulty scoring** | Score mathematics items from two KT datasets (XES3G5M, Junyi Academy) using visible item content only. |
-| 2 | 📊 **Authentic-response validation** | Validate LLM scores against authentic held-out learner error rates (Rasch-based and empirical references), with nested-CV incremental-validity and sensitivity analyses. |
+| 2 | 📊 **Authentic-response validation** | Validate LLM scores against authentic held-out empirical learner error rates, with nested-CV incremental-validity and sensitivity analyses. Rasch/1PL estimation is included as a diagnostic reference only; the fits did not converge and are not used to support the paper's substantive conclusions. |
 | 3 | 🧪 **Controlled signal-decoupling simulation** | Use GSM8K items to separate a generative difficulty signal from surface-feature confounds under a known ground truth. |
 | 4 | 🧠 **Knowledge tracing experiments** | Inject the LLM difficulty score as an auxiliary scalar feature into GRU and SAKT backbones, under response-limited training and genuine unseen-item cold-start regimes (5-fold item holdout, shared `UNK_ITEM` representation, item-ID dropout). |
 
@@ -25,7 +25,7 @@ requirements.txt
 src/
 ├── data_prep/     dataset unification, item eligibility, content sufficiency
 ├── llm_scoring/   LLM difficulty scoring pipeline (pilot + full scoring)
-├── measurement/   Rasch estimation, authentic construct validity, RQ1
+├── measurement/   Held-out empirical difficulty, RQ1 construct validity (Rasch estimation retained as a non-converged diagnostic)
 ├── simulation/    controlled signal-decoupling simulation (GSM8K)
 └── kt/            GRU / SAKT knowledge tracing (response-limited + unseen-item)
 
@@ -85,7 +85,7 @@ To regenerate LLM scores from scratch instead (requires an API key and the prepa
 
 ## 🔬 Authentic-response analysis
 
-Builds held-out difficulty references (Rasch and empirical, including an orientation-corrected variant), validates LLM scores against them, and produces the RQ1 visible-feature association, incremental-validity, and sensitivity tables:
+Builds the held-out empirical difficulty reference (the substantive authentic-response reference, including an orientation-corrected variant) plus a diagnostic, non-converged Rasch/1PL reference, validates LLM scores against the empirical reference, and produces the RQ1 visible-feature association, incremental-validity, and sensitivity tables:
 
 ```bash
 python scripts/run_authentic_analysis.py
@@ -132,7 +132,8 @@ python scripts/build_results.py
 
 | Prefix | Contents |
 |---|---|
-| `results/AUTHENTIC_*`, `RASCH_*`, `RQ1_*` | Authentic-response validity results |
+| `results/AUTHENTIC_*`, `RQ1_*` | Authentic-response validity results (substantive, empirical-error-based) |
+| `results/RASCH_*` | Diagnostic Rasch/1PL reference (non-converged; not used for substantive conclusions) |
 | `results/SYNTHETIC_*` | Controlled simulation results |
 | `results/LIMITED_KT_*`, `results/*RESPONSE_LIMITED_KT*` | Response-limited KT results |
 | `results/UNSEEN_ITEM_KT_*`, `results/SAKT_RESPONSE_LIMITED_KT_*` | Genuine unseen-item and SAKT-backbone KT results |
