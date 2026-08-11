@@ -32,7 +32,20 @@ def cfg():
     return load_config()
 
 
+def _require_processed_items(*datasets: str) -> None:
+    missing = [
+        ds for ds in datasets
+        if not (ROOT / "data_processed" / ds / "items.parquet").exists()
+    ]
+    if missing:
+        pytest.skip(
+            f"processed items not built for {missing}; run src/data_prep/build_unified_*.py "
+            "against locally obtained raw data first (see data/README.md)"
+        )
+
+
 def test_item_universe_counts(cfg):
+    _require_processed_items(*DATASETS)
     for ds in DATASETS:
         items = pd.read_parquet(ROOT / "data_processed" / ds / "items.parquet")
         n = int(items["eligible_for_llm_scoring"].sum())
@@ -43,6 +56,7 @@ def test_no_excluded_items_in_llm_features():
     path = ROOT / "artifacts" / "scores" / "llm_item_scores.parquet"
     if not path.exists():
         pytest.skip("LLM features missing")
+    _require_processed_items(*DATASETS)
     llm = pd.read_parquet(path)
     for ds in DATASETS:
         items = pd.read_parquet(ROOT / "data_processed" / ds / "items.parquet")
@@ -102,6 +116,8 @@ def test_calibration_tables_item_level_cv():
 
 
 def test_synthetic_d_ind_rank_independent():
+    if not (ROOT / "data_raw" / "gsm8k" / "train.csv").exists():
+        pytest.skip("GSM8K raw data not available locally; see data/README.md")
     items = load_gsm8k_items(50)
     d_llm = normalize_z(items["difficulty"].values)
     rng = np.random.default_rng(2024)

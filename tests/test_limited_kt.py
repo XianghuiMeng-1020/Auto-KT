@@ -27,17 +27,33 @@ def cfg():
     return load_config()
 
 
+def _require_processed(dataset: str) -> None:
+    from limited_kt_common import PROCESSED
+
+    if not (PROCESSED / dataset / "items.parquet").exists():
+        pytest.skip(
+            f"processed items not built for {dataset}; run src/data_prep/build_unified_*.py "
+            "against locally obtained raw data first (see data/README.md)"
+        )
+
+
 def test_exposure_levels_frozen(cfg):
     assert cfg["exposure_levels"] == [0, 1, 3, 5, 10, 20, "warm"]
 
 
 def test_primary_conditions_frozen(cfg):
+    # "CharacterLength" (character-length cold-start control) was added to the
+    # primary condition set after this assertion was first written; it is
+    # fully wired through paired_comparisons, run_character_length_condition.py,
+    # and the populated result tables, so the config below reflects the
+    # actual, complete experiment rather than the earlier partial list.
     assert cfg["primary_conditions"] == [
-        "Standard", "LLM-Mini", "LLM-5.4", "Random-Scalar", "TrainEmpDiff"
+        "Standard", "LLM-Mini", "LLM-5.4", "Random-Scalar", "CharacterLength", "TrainEmpDiff"
     ]
 
 
 def test_masks_identical_hash_across_reread(cfg):
+    _require_processed("junyi")
     df1, h1 = build_exposure_mask("junyi", 5, cfg)
     df2, h2 = build_exposure_mask("junyi", 5, cfg)
     assert h1 == h2
@@ -45,12 +61,14 @@ def test_masks_identical_hash_across_reread(cfg):
 
 
 def test_exposure_cap_respected(cfg):
+    _require_processed("junyi")
     df, _ = build_exposure_mask("junyi", 3, cfg)
     counts = df.groupby("item_id_hash").size()
     assert counts.max() <= 3
 
 
 def test_warm_uses_more_than_zero(cfg):
+    _require_processed("junyi")
     z, _ = build_exposure_mask("junyi", 0, cfg)
     w, _ = build_exposure_mask("junyi", "warm", cfg)
     assert len(w) > len(z)
@@ -64,11 +82,13 @@ def test_scalar_parameter_counts_comparable():
 
 
 def test_bundle_universe_counts(cfg):
+    _require_processed("junyi")
     b = load_dataset_bundle("junyi", "warm", cfg, max_train_students=50, max_test_students=20)
     assert len(b.item_to_idx) == cfg["scoreable_counts"]["junyi"]
 
 
 def test_no_test_in_train_empirical(cfg):
+    _require_processed("junyi")
     b = load_dataset_bundle("junyi", 0, cfg, max_train_students=30, max_test_students=10)
     assert "train_empirical" in b.scalar_maps
     assert "oracle_empirical" in b.scalar_maps

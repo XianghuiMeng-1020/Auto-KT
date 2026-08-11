@@ -35,6 +35,15 @@ def cfg() -> PilotConfig:
     return PilotConfig.load()
 
 
+def _require_pilot_items(cfg: PilotConfig) -> None:
+    missing = [ds for ds in ("xes3g5m", "junyi") if not (PILOT_DIR / f"{ds}_pilot_items.parquet").exists()]
+    if missing:
+        pytest.skip(
+            f"pilot item samples not built for {missing}; requires locally processed data "
+            "(see data/README.md)"
+        )
+
+
 def test_manual_review_sample_membership(cfg: PilotConfig):
     for ds in ("xes3g5m", "junyi"):
         pilot_path = PILOT_DIR / f"{ds}_pilot_items.parquet"
@@ -52,6 +61,7 @@ def test_manual_review_sample_membership(cfg: PilotConfig):
 
 
 def test_review_sample_hash_stable(cfg: PilotConfig):
+    _require_pilot_items(cfg)
     assert review_sample_hash(cfg) == review_sample_hash(cfg)
     assert len(review_sample_hash(cfg)) == 64
 
@@ -106,6 +116,7 @@ def test_gate_state_conditional_implies_not_full_ready():
 
 
 def test_decide_pilot_gate_conditional_when_amendment_not_adopted(cfg: PilotConfig):
+    _require_pilot_items(cfg)
     review_df, _ = build_manual_review_table(cfg)
     parse_df = pd.DataFrame({
         "first_pass_valid_rate": [1.0, 1.0, 1.0, 1.0],
@@ -121,6 +132,7 @@ def test_decide_pilot_gate_conditional_when_amendment_not_adopted(cfg: PilotConf
 
 
 def test_decide_pilot_gate_pass_requires_adopted_amendment(cfg: PilotConfig):
+    _require_pilot_items(cfg)
     review_df, _ = build_manual_review_table(cfg)
     parse_df = pd.DataFrame({"first_pass_valid_rate": [1.0]})
     amendment = {"affected_pct": 0.0, "adopted": True}
@@ -133,6 +145,7 @@ def test_decide_pilot_gate_pass_requires_adopted_amendment(cfg: PilotConfig):
 
 
 def test_build_review_summary_row_count(cfg: PilotConfig):
+    _require_pilot_items(cfg)
     review_df, _ = build_manual_review_table(cfg)
     summary = build_review_summary(review_df)
     assert len(summary) >= 4

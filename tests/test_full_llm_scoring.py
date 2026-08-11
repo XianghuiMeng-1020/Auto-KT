@@ -42,7 +42,17 @@ def cfg() -> FullScoringConfig:
     return FullScoringConfig.load()
 
 
+def _require_processed(*datasets: str) -> None:
+    missing = [ds for ds in datasets if not (PROCESSED_ROOT / ds / "items.parquet").exists()]
+    if missing:
+        pytest.skip(
+            f"processed items not built for {missing}; run src/data_prep/build_unified_*.py "
+            "against locally obtained raw data first (see data/README.md)"
+        )
+
+
 def test_expected_item_model_pair_count(cfg: FullScoringConfig):
+    _require_processed(*DATASETS)
     plan = build_request_plan(cfg)
     assert len(plan) == 11106
     assert sum(1 for r in plan if r["dataset"] == "xes3g5m") == 5363 * 2
@@ -50,6 +60,7 @@ def test_expected_item_model_pair_count(cfg: FullScoringConfig):
 
 
 def test_no_excluded_items_in_plan(cfg: FullScoringConfig):
+    _require_processed(*DATASETS)
     for ds in DATASETS:
         items = pd.read_parquet(PROCESSED_ROOT / ds / "items.parquet")
         excluded = set(items.loc[~items["eligible_for_llm_scoring"], "item_id_hash"])
@@ -83,6 +94,7 @@ def test_no_outcome_tables_in_full_scoring_scripts():
 
 
 def test_no_answer_in_prompt_payload(cfg: FullScoringConfig):
+    _require_processed(*DATASETS)
     plan = build_request_plan(cfg)[:5]
     for req in plan:
         blob = json.dumps(render_messages(req["stem_text"]))

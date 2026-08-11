@@ -57,20 +57,23 @@ def test_classify_item_returns_controlled_reason(xes_items):
     assert out["content_sufficiency_rule_version"] == CONTENT_SUFFICIENCY_RULE_VERSION
 
 
+CONTENT_SUFFICIENCY_SRC = ROOT / "src" / "data_prep" / "content_sufficiency.py"
+
+
 def test_classifier_does_not_read_llm_outputs():
-    text = Path(ROOT / "scripts" / "data" / "content_sufficiency.py").read_text(encoding="utf-8")
+    text = CONTENT_SUFFICIENCY_SRC.read_text(encoding="utf-8")
     for term in ("scalar_difficulty", "raw_response", "cache_index", "parse_valid"):
         assert term not in text
 
 
 def test_classifier_does_not_read_outcomes():
-    text = Path(ROOT / "scripts" / "data" / "content_sufficiency.py").read_text(encoding="utf-8")
+    text = CONTENT_SUFFICIENCY_SRC.read_text(encoding="utf-8")
     for term in ("interactions.parquet", "correctness", "error_rate", "empirical_difficulty"):
         assert term not in text
 
 
 def test_no_response_counts_in_inclusion_decision():
-    text = Path(ROOT / "scripts" / "data" / "content_sufficiency.py").read_text(encoding="utf-8")
+    text = CONTENT_SUFFICIENCY_SRC.read_text(encoding="utf-8")
     assert "response_count" not in text
     assert "train_response_count" not in text
 
