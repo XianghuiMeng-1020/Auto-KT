@@ -1,0 +1,50 @@
+{
+  "schema_version": "limited_kt_v1",
+  "datasets": ["xes3g5m", "junyi"],
+  "scoreable_counts": {"xes3g5m": 5363, "junyi": 190},
+  "exposure_levels": [0, 1, 3, 5, 10, 20, "warm"],
+  "conditions": {
+    "Standard": {"use_scalar": false, "scalar_source": null, "deployable": true},
+    "LLM-Mini": {"use_scalar": true, "scalar_source": "gpt-4o-mini", "deployable": true},
+    "LLM-5.4": {"use_scalar": true, "scalar_source": "gpt-5.4", "deployable": true},
+    "Random-Scalar": {"use_scalar": true, "scalar_source": "random_matched", "deployable": true},
+    "CharacterLength": {"use_scalar": true, "scalar_source": "char_length_norm", "deployable": true},
+    "TrainEmpDiff": {"use_scalar": true, "scalar_source": "train_empirical", "deployable": true},
+    "OracleEmpDiff": {"use_scalar": true, "scalar_source": "oracle_empirical", "deployable": false}
+  },
+  "primary_conditions": ["Standard", "LLM-Mini", "LLM-5.4", "Random-Scalar", "CharacterLength", "TrainEmpDiff"],
+  "seeds": [2024, 42, 123, 456, 789],
+  "pilot": {
+    "seeds": [2024],
+    "max_train_students": 400,
+    "max_test_students": 150,
+    "include_oracle": false
+  },
+  "model": {
+    "emb_dim": 32,
+    "hidden_dim": 32,
+    "max_seq_len": 80,
+    "batch_size": 64,
+    "lr": 0.001,
+    "max_epochs": 4,
+    "early_stop_patience": 2,
+    "mask_seed": 2024
+  },
+  "train_emp_prior": [1, 1],
+  "exposure_zero_train_emp": "global_train_mean",
+  "review_budgets": [0.05, 0.10, 0.20],
+  "primary_review_budget": 0.10,
+  "holm_families": ["xes_predictive", "junyi_predictive", "calibration", "prioritisation"],
+  "paired_comparisons": [
+    ["LLM-Mini", "Standard"],
+    ["LLM-5.4", "Standard"],
+    ["LLM-Mini", "Random-Scalar"],
+    ["LLM-5.4", "Random-Scalar"],
+    ["CharacterLength", "Standard"],
+    ["LLM-Mini", "CharacterLength"],
+    ["LLM-5.4", "CharacterLength"],
+    ["LLM-Mini", "TrainEmpDiff"],
+    ["LLM-5.4", "TrainEmpDiff"],
+    ["TrainEmpDiff", "OracleEmpDiff"]
+  ]
+}

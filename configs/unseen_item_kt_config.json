@@ -1,0 +1,43 @@
+{
+  "schema_version": "unseen_item_kt_v1",
+  "item_fold_seed": 2024,
+  "n_item_folds": 5,
+  "item_id_dropout": 0.10,
+  "datasets": ["xes3g5m", "junyi"],
+  "seeds": [2024, 42, 123, 456, 789],
+  "coldstart_conditions": ["Standard", "LLM-Mini", "LLM-5.4", "Random-Scalar", "CharacterLength"],
+  "limited_conditions": ["Standard", "LLM-Mini", "LLM-5.4", "Random-Scalar", "CharacterLength", "TrainEmpDiff"],
+  "limited_exposures": [1, 3, 5, 10, 20, "warm"],
+  "backbones": {
+    "GRU": {
+      "type": "gru",
+      "emb_dim": 32,
+      "hidden_dim": 32,
+      "dropout": 0.0
+    },
+    "SAKT": {
+      "type": "sakt",
+      "d_model": 64,
+      "n_heads": 4,
+      "dropout": 0.2,
+      "n_blocks": 1
+    }
+  },
+  "train": {
+    "max_seq_len": 80,
+    "batch_size": 64,
+    "lr": 0.001,
+    "max_epochs": 4,
+    "early_stop_patience": 2,
+    "mask_seed": 2024
+  },
+  "train_emp_prior": [1, 1],
+  "conditions": {
+    "Standard": {"use_scalar": false, "scalar_source": null},
+    "LLM-Mini": {"use_scalar": true, "scalar_source": "gpt-4o-mini"},
+    "LLM-5.4": {"use_scalar": true, "scalar_source": "gpt-5.4"},
+    "Random-Scalar": {"use_scalar": true, "scalar_source": "random_matched"},
+    "CharacterLength": {"use_scalar": true, "scalar_source": "char_length_norm"},
+    "TrainEmpDiff": {"use_scalar": true, "scalar_source": "train_empirical"}
+  }
+}

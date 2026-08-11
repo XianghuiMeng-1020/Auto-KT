@@ -1,0 +1,140 @@
+{
+  "generated_at_utc": "2026-07-01T03:10:35Z",
+  "code_commit": "d6c6d917cef79514904ce1d812c882485bc79eab",
+  "config_hash": "dceb67e8db05a0e5dd18314d575e6616debf4035cecbbbbef74f7c7a6fa35a3b",
+  "llm_features_hash": "e500151f9f5b1be065ea9c8bf10caece2ca67908c5d7ebe65c9153db864c86a9",
+  "config": {
+    "schema_version": "measurement_validity_v1",
+    "datasets": [
+      "xes3g5m",
+      "junyi"
+    ],
+    "llm_scoreable_counts": {
+      "xes3g5m": 5363,
+      "junyi": 190
+    },
+    "response_thresholds": [
+      5,
+      10,
+      20,
+      50,
+      100
+    ],
+    "primary_response_threshold": 20,
+    "beta_priors": {
+      "beta_1_1": [
+        1,
+        1
+      ],
+      "beta_2_2": [
+        2,
+        2
+      ],
+      "empirical_bayes": "data_driven"
+    },
+    "rasch": {
+      "estimator_version": "rasch_1pl_jmle_v1",
+      "max_iter": 80,
+      "tol": 0.0001,
+      "seed": 2024,
+      "min_responses_for_fit": 5
+    },
+    "bootstrap": {
+      "n": 500,
+      "seed": 2024
+    },
+    "cv_folds": 5,
+    "cv_seed": 2024,
+    "holm_families": [
+      "authentic_convergent_validity",
+      "incremental_validity",
+      "bucket_contrasts",
+      "synthetic_trend"
+    ],
+    "synthetic": {
+      "dataset": "gsm8k_irt",
+      "cache_path": "artifacts/scores/gsm8k_legacy_difficulty_scores.csv",
+      "item_subset": 200,
+      "num_students": 600,
+      "responses_per_student_min": 20,
+      "responses_per_student_max": 50,
+      "irt_scale": 10.0,
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789,
+        1001,
+        2025,
+        314,
+        2718,
+        1618
+      ],
+      "conditions": {
+        "S0": {
+          "d_llm_weight": 1.0,
+          "d_ind_weight": 0.0,
+          "type": "circular"
+        },
+        "S1": {
+          "d_llm_weight": 0.75,
+          "d_ind_weight": 0.25,
+          "type": "aligned"
+        },
+        "S2": {
+          "d_llm_weight": 0.5,
+          "d_ind_weight": 0.5,
+          "type": "aligned"
+        },
+        "S3": {
+          "d_llm_weight": 0.25,
+          "d_ind_weight": 0.75,
+          "type": "aligned"
+        },
+        "S4": {
+          "d_llm_weight": 0.0,
+          "d_ind_weight": 1.0,
+          "type": "independent"
+        },
+        "S5": {
+          "type": "surface_confounded"
+        }
+      }
+    }
+  },
+  "output_table_hashes": {
+    "AUTHENTIC_DIFFICULTY_REFERENCES.csv": "24083f174534d63ddf86f320b34e730fdbfe88fe5a6edbde8019834039908e2e",
+    "AUTHENTIC_ITEM_SURFACE_FEATURES.csv": "3b98a77ecce6650e1432083189d5ab4914e8db65bfd6ac24c1b0b6a611647446",
+    "AUTHENTIC_VALIDITY_CORRELATIONS.csv": "d60c694f4afeee588826eeeb22049f527b0d5899559c6a73a9a9f1fb1b2a68fd",
+    "AUTHENTIC_VALIDITY_THRESHOLDS.csv": "b5b44fe84086db95b8b2b1a04306869c3b282e9aa21b7d12e4178c3366094912",
+    "AUTHENTIC_BUCKET_ANALYSIS.csv": "7ffd9ff1c1e849e837be5d2afb173e7a66f2d091e53b0ea27b1c66884361a6f2",
+    "AUTHENTIC_INCREMENTAL_VALIDITY.csv": "3dcfc3f8a0e6e6cb3ce55c7fd030bcf9179358c395869f1e155d198781f70974",
+    "AUTHENTIC_CONFOUND_DIAGNOSTICS.csv": "b5af1059fee899ce690c9a64801e4e444fb0a17e74ab89b7a0f45c4681469386",
+    "AUTHENTIC_CALIBRATION_RESULTS.csv": "8632f7080331e9815054d873a14ed13b56c2b2b34749918c45e44df6bf398376",
+    "AUTHENTIC_CROSS_DATASET_SYNTHESIS.csv": "e10dfdc302b06148b354ee82a5d983818eede28154a6fdf5ba48cf567b86cf02",
+    "AUTHENTIC_MODEL_AGREEMENT.csv": "b7f7ed00ac9e70e9cd93ef1293f27c85653ce3e7832be49fbb8fdb1b923b0cdd",
+    "RASCH_ITEM_DIFFICULTIES.csv": "90895759789c637e7a696b9c718b070e84d2d62fbeeea5fc7880e97a01e93e48",
+    "RASCH_CONVERGENCE_SUMMARY.csv": "e6794906b0f3a41ee111ff49cd0190b5977d991a27bb0b935c8ca413e79f7afb",
+    "SYNTHETIC_ALIGNMENT_CONDITIONS.csv": "f4f584860ef3938a03bbff0ae6330247c49e3f9aa6fef165d95c4e5b157112bc",
+    "SYNTHETIC_ALIGNMENT_VALIDITY.csv": "9a3d2446f86782d76aeec0e894a6feefedc60cc07d64bbba7a4e1a9068405725",
+    "SYNTHETIC_ALIGNMENT_TREND_TESTS.csv": "7f807961f8977ce564c7e09305790682a1552166c586aa3c88802c990ba74f55",
+    "SYNTHETIC_ALIGNMENT_SEED_SUMMARY.csv": "53972c4e0af7889fdaa141ae4bcf6158f86f0feb0cc5756602b1c20e1943143b"
+  },
+  "figure_hashes": {
+    "fig_bucket_monotonicity.png": "ee0c1f67ee29caec385dce23de1ea713fe22e777b595a1a31f7d7e7ffb679194",
+    "fig_surface_vs_authentic.pdf": "5a1c46fa691c4e1106eb413cc1e467b8f23ac34a56f6ccdb4fbe9673db658415",
+    "fig_synthetic_alignment_ladder.pdf": "72be8c7dc20fc3be36f7708ff69742980509287d88aa36fd7b458a210c5947ed",
+    "fig_incremental_validity.pdf": "ed88a8202b2c88e6086e521e319b1622e6c87dcd821082760eb8f37a0287b33a",
+    "fig_surface_vs_authentic.png": "c296074bfc10b52b328dbceed70c881ede5b480438305c5f32db0ddff428dbb9",
+    "fig_bucket_monotonicity.pdf": "b66bca5d0be3156905266aa801ce848e4b393c7e8069a907fc01ef3e0dbcfbfe",
+    "fig_synthetic_alignment_ladder.png": "8ae165906c2fb0f7a52a61affed86b881445d5161511a3a685ca0df07b2b5a38",
+    "fig_incremental_validity.png": "8c52b7abd0b3bd4938d2da0cadec12c4e27512b4221a94448817802a75626372",
+    "fig_authentic_validity.pdf": "c591d03391ea4a0e667e5113f836f4dcb1491b9f7298c070940efabf13fbfd53",
+    "fig_authentic_validity.png": "34a31e64e694a52ddda47f131c80681d964f9fd45571ef7d6ed2c842e2f529f5"
+  },
+  "authentic_validity_status": "AUTHENTIC_VALIDITY_PASS",
+  "synthetic_alignment_status": "SYNTHETIC_ALIGNMENT_PASS",
+  "measurement_evidence_ready": true,
+  "project_status": "MEASUREMENT_VALIDITY_PASS"
+}

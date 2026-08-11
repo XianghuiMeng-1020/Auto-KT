@@ -1,0 +1,11 @@
+dataset,universe,items,learners,interactions,source
+xes3g5m,full processed interaction universe,7618,14453,4446374,processed parquet + AUTHENTIC_DIFFICULTY_REFERENCES.csv
+xes3g5m,KT universe,7618,14453,4446374,processed parquet + AUTHENTIC_DIFFICULTY_REFERENCES.csv
+xes3g5m,LLM-scoreable/shared confirmatory universe,5363,14453,3142898,processed parquet + AUTHENTIC_DIFFICULTY_REFERENCES.csv
+xes3g5m,primary authentic validity universe (held-out n>=20),3279,14453,3077842,processed parquet + AUTHENTIC_DIFFICULTY_REFERENCES.csv
+xes3g5m,actual limited-KT analysis universe (shared confirmatory),5363,14453,3142898,limited_kt_common.py filters interactions to eligible_for_llm_scoring; RUN_REGISTRY ok final runs
+junyi,full processed interaction universe,666,122794,23891296,processed parquet + AUTHENTIC_DIFFICULTY_REFERENCES.csv
+junyi,KT universe,666,122794,23891296,processed parquet + AUTHENTIC_DIFFICULTY_REFERENCES.csv
+junyi,LLM-scoreable/shared confirmatory universe,190,73313,4935335,processed parquet + AUTHENTIC_DIFFICULTY_REFERENCES.csv
+junyi,primary authentic validity universe (held-out n>=20),183,73313,4935145,processed parquet + AUTHENTIC_DIFFICULTY_REFERENCES.csv
+junyi,actual limited-KT analysis universe (shared confirmatory),190,73313,4935335,limited_kt_common.py filters interactions to eligible_for_llm_scoring; RUN_REGISTRY ok final runs

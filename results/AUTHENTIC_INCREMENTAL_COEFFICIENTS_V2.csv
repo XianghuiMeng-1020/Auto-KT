@@ -1,0 +1,9 @@
+dataset,model_spec,term,standardized_coefficient
+xes3g5m,B_surface_gpt4o_scalar,gpt4o_scalar,0.01981503421122539
+xes3g5m,C_surface_gpt54_scalar,gpt54_scalar,0.01050581901419704
+xes3g5m,D_surface_both_scalar,gpt4o_scalar,0.019067864004377138
+xes3g5m,D_surface_both_scalar,gpt54_scalar,0.0014113680391133227
+junyi,B_surface_gpt4o_scalar,gpt4o_scalar,0.02081011313994461
+junyi,C_surface_gpt54_scalar,gpt54_scalar,0.011865039747435503
+junyi,D_surface_both_scalar,gpt4o_scalar,0.01817005027116899
+junyi,D_surface_both_scalar,gpt54_scalar,0.004736627577535589

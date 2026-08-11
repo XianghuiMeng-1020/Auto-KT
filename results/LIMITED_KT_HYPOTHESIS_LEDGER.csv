@@ -1,0 +1,6 @@
+hypothesis,statement,status,accessible_interpretation
+H1,LLM utility greater at 0-5 than warm,NOT_SUPPORTED,"Cold-start gaps were larger because LLM was worse than Standard, not because it helped more when evidence was scarce"
+H2,LLM beats Random-Scalar cold start,NOT_SUPPORTED,"LLM did not outperform a random content-matched scalar at low exposure"
+H3,TrainEmpDiff improves with exposure,PARTIALLY_SUPPORTED,"Learner-derived difficulty became modestly more useful on XES at higher exposure; flat on Junyi"
+H4,Weak inverse validity limits LLM utility,SUPPORTED,"No practically meaningful KT advantage; consistent with measurement-layer inverse alignment"
+H5,GPT-5.4 consistently beats GPT-4o-mini,NOT_SUPPORTED,"No consistent operational or validity advantage for the stronger LLM"

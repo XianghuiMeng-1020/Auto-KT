@@ -1,0 +1,9 @@
+dataset,reference_column,rebuilt_candidate,n_items,max_abs_diff,mean_abs_diff,exact_within_1e-12
+xes3g5m,raw_error_rate,raw_error_rebuilt,5031,1.1102230246251565e-16,2.1670940787796528e-17,True
+xes3g5m,smoothed_error_beta_1_1,smoothed_error_rebuilt,5031,0.9823529411764705,0.5337718768542448,False
+xes3g5m,smoothed_error_beta_1_1,smoothed_correctness_rebuilt,5031,1.1102230246251565e-16,1.1235877397769874e-17,True
+xes3g5m,first_attempt_error_rate,raw_error_rebuilt,5031,1.1102230246251565e-16,2.1670940787796528e-17,True
+junyi,raw_error_rate,raw_error_rebuilt,185,8.326672684688674e-17,2.606773655792175e-17,True
+junyi,smoothed_error_beta_1_1,smoothed_error_rebuilt,185,0.9163910117486027,0.3990811671753721,False
+junyi,smoothed_error_beta_1_1,smoothed_correctness_rebuilt,185,1.1102230246251565e-16,4.650934292348629e-18,True
+junyi,first_attempt_error_rate,raw_error_rebuilt,185,0.48691358024691367,0.19592229748710605,False

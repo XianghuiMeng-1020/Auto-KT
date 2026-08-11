@@ -1,0 +1,187 @@
+{
+  "generated_at_utc": "2026-07-01T02:46:53Z",
+  "status": "FULL_LLM_SCORING_PASS",
+  "code_commit": "959148cccec1623a2c77fbbabb77915c05f4988f",
+  "schema_version": "full_llm_scoring_v1",
+  "prompt_hash": "f47c02a4cc4a15f46f280908c13ba2ebacfefe36dc7307eb3c18ca1695efa165",
+  "content_sufficiency_rule_version": "content_sufficiency_v1",
+  "amendment_009_hash": "58be0b4f09f120eb15debd3c064df8a6e2f818026fbd3d9e61dc6568d76ce480",
+  "amendment_010_hash": "9023db89b93fe3b579575924437b4c26cdb8e5b864077f6e0b3f05d12ed028d9",
+  "models": [
+    "gpt-4o-mini",
+    "gpt-5.4"
+  ],
+  "scoreable_counts": {
+    "xes3g5m": 5363,
+    "junyi": 190
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_tokens": 16,
+    "seed": 2024
+  },
+  "output_table_hashes": {
+    "xes3g5m_gpt4o_mini.parquet": "3bf47ebe07dd6e98bcd30722034de81a363e128889801626298eee20bd2944f9",
+    "junyi_gpt5_4.parquet": "7459e696f2c52e47000a2527eb185f8396a31c86d4a60cb64ffb07cb18b00e49",
+    "junyi_gpt4o_mini.parquet": "afe8b21ed0e66fb7cb2b01b1732fbc78fa44f54392b386abc9a863dbe4431dcf",
+    "xes3g5m_gpt5_4.parquet": "0b546f32724f126a091c305b442bb8669bc85ae0f16eddf1d5c37ea74c14bfbb",
+    "all_llm_item_features.parquet": "e500151f9f5b1be065ea9c8bf10caece2ca67908c5d7ebe65c9153db864c86a9"
+  },
+  "cache_manifest_hash": "58ef1c4b83a9deb4e7782bf091a2f084ee4a9ce585f57c0c564c77bc4f1e7d7a",
+  "run_stats": {
+    "expected_requests": 11106,
+    "cache_hits": 208,
+    "pilot_imports": 208,
+    "paid_calls": 10899,
+    "retries": 1,
+    "failures": 0,
+    "failure_classes": {
+      "parse_failure": 1
+    },
+    "input_tokens": 1287035,
+    "output_tokens": 49045,
+    "cached_tokens": 0,
+    "estimated_cost_usd": 0.22248225000000096,
+    "wall_time_s": 18074.95577788353,
+    "connection_incidents": 0,
+    "rate_limit_delays_s": 0.0,
+    "unique_new_primary_item_model_calls": 10898,
+    "additional_paid_retry_calls": 1,
+    "total_paid_api_calls": 10899,
+    "reconciliation": {
+      "expected_primary_scores": 11106,
+      "observed_primary_scores": 11106,
+      "missing_primary_scores": 0,
+      "duplicate_primary_scores": 0,
+      "pilot_cache_reuse": 208,
+      "unique_new_primary_item_model_calls": 10898,
+      "additional_paid_retry_calls": 1,
+      "total_paid_api_calls": 10899,
+      "excess_call_reason": "format_retry",
+      "format_retry_incidents": [
+        {
+          "dataset": "xes3g5m",
+          "item_id_hash": "b5e2104fce9b3be1a3b658c7545c506b7acbcdbc0db3477e570b59b7b6b2471e",
+          "model": "gpt-5.4",
+          "cache_key": null,
+          "reconciliation_class": "format_retry",
+          "retry_count": 1,
+          "paid_api_calls_for_item_model": 2,
+          "parse_status": "valid",
+          "scalar_difficulty": 0.18,
+          "pilot_cache_import": false,
+          "cache_hit": false,
+          "primary_table_eligible": true
+        }
+      ],
+      "reconciliation_pass": true
+    }
+  },
+  "validation": {
+    "status": "FULL_LLM_SCORING_PASS",
+    "n_records": 11106,
+    "parse_gates": [
+      {
+        "dataset": "xes3g5m",
+        "model": "gpt-4o-mini",
+        "expected_items": 5363,
+        "completed_items": 5363,
+        "valid_first_pass": 5363,
+        "valid_after_retry": 5363,
+        "failed_count": 0,
+        "missing_field_count": 0,
+        "out_of_range_count": 0,
+        "non_finite_count": 0,
+        "rationale_violation_count": 0,
+        "answer_disclosure_count": 0,
+        "duplicate_response_count": 0,
+        "cache_hit_count": 71,
+        "pilot_import_count": 71,
+        "paid_call_count": 5292
+      },
+      {
+        "dataset": "xes3g5m",
+        "model": "gpt-5.4",
+        "expected_items": 5363,
+        "completed_items": 5363,
+        "valid_first_pass": 5362,
+        "valid_after_retry": 5363,
+        "failed_count": 0,
+        "missing_field_count": 0,
+        "out_of_range_count": 0,
+        "non_finite_count": 0,
+        "rationale_violation_count": 0,
+        "answer_disclosure_count": 0,
+        "duplicate_response_count": 0,
+        "cache_hit_count": 71,
+        "pilot_import_count": 71,
+        "paid_call_count": 5292
+      },
+      {
+        "dataset": "junyi",
+        "model": "gpt-4o-mini",
+        "expected_items": 190,
+        "completed_items": 190,
+        "valid_first_pass": 190,
+        "valid_after_retry": 190,
+        "failed_count": 0,
+        "missing_field_count": 0,
+        "out_of_range_count": 0,
+        "non_finite_count": 0,
+        "rationale_violation_count": 0,
+        "answer_disclosure_count": 0,
+        "duplicate_response_count": 0,
+        "cache_hit_count": 33,
+        "pilot_import_count": 33,
+        "paid_call_count": 157
+      },
+      {
+        "dataset": "junyi",
+        "model": "gpt-5.4",
+        "expected_items": 190,
+        "completed_items": 190,
+        "valid_first_pass": 190,
+        "valid_after_retry": 190,
+        "failed_count": 0,
+        "missing_field_count": 0,
+        "out_of_range_count": 0,
+        "non_finite_count": 0,
+        "rationale_violation_count": 0,
+        "answer_disclosure_count": 0,
+        "duplicate_response_count": 0,
+        "cache_hit_count": 33,
+        "pilot_import_count": 33,
+        "paid_call_count": 157
+      }
+    ],
+    "spot_check_pass_rate": 1.0,
+    "reconciliation": {
+      "expected_primary_scores": 11106,
+      "observed_primary_scores": 11106,
+      "missing_primary_scores": 0,
+      "duplicate_primary_scores": 0,
+      "pilot_cache_reuse": 208,
+      "unique_new_primary_item_model_calls": 10898,
+      "additional_paid_retry_calls": 1,
+      "total_paid_api_calls": 10899,
+      "excess_call_reason": "format_retry",
+      "format_retry_incidents": [
+        {
+          "dataset": "xes3g5m",
+          "item_id_hash": "b5e2104fce9b3be1a3b658c7545c506b7acbcdbc0db3477e570b59b7b6b2471e",
+          "model": "gpt-5.4",
+          "cache_key": null,
+          "reconciliation_class": "format_retry",
+          "retry_count": 1,
+          "paid_api_calls_for_item_model": 2,
+          "parse_status": "valid",
+          "scalar_difficulty": 0.18,
+          "pilot_cache_import": false,
+          "cache_hit": false,
+          "primary_table_eligible": true
+        }
+      ],
+      "reconciliation_pass": true
+    }
+  }
+}

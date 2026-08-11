@@ -1,0 +1,5 @@
+synthesis_target,model,datasets,pooled_effect,Q,I2,tau2,note
+spearman_llm_vs_test_smoothed_error,gpt-4o-mini,"xes3g5m,junyi",-0.11311703530208203,2.989574836788614,66.55042758273298,0.005518354574599529,descriptive_two_dataset_meta
+spearman_llm_vs_test_smoothed_error,gpt-5.4,"xes3g5m,junyi",-0.11759092609468207,0.5747079964113254,0.0,0.0,descriptive_two_dataset_meta
+incremental_r2_beyond_surface,B_surface_gpt4o_scalar,"xes3g5m,junyi",0.01810603496930102,,,,descriptive_mean_incremental_r2
+incremental_r2_beyond_surface,C_surface_gpt54_scalar,"xes3g5m,junyi",-0.00285713092117601,,,,descriptive_mean_incremental_r2

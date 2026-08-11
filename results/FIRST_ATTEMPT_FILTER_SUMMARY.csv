@@ -1,0 +1,3 @@
+dataset,test_interactions_before_filter,test_interactions_after_first_attempt_flag_filter,test_interactions_after_first_observed_pair_filter,unique_learner_item_pairs,flag_retention_rate,first_observed_retention_rate
+xes3g5m,630642,630642,601646,601646,1.0,0.9540214574988662
+junyi,975391,776147,71895,71895,0.7957290973568548,0.07370890237863585

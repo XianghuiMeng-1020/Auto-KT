@@ -1,0 +1,7 @@
+dataset,split_assignment,interactions,students,items
+xes3g5m,test,889531,2891,7173
+xes3g5m,train,3114054,10117,7457
+xes3g5m,val,442789,1445,6799
+junyi,test,4713329,24560,651
+junyi,train,16770258,85955,663
+junyi,val,2407709,12279,647

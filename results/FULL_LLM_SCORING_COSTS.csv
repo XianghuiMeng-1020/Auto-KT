@@ -1,0 +1,11 @@
+metric,value,unit
+expected_primary_scores,11106.0,item_model_pairs
+observed_primary_scores,11106.0,cache_records
+pilot_cache_reuse,208.0,item_model_pairs
+unique_new_primary_item_model_calls,10898.0,item_model_pairs
+additional_paid_retry_calls,1.0,api_calls
+total_paid_api_calls,10899.0,api_calls
+input_tokens,1287035.0,tokens
+output_tokens,49045.0,tokens
+estimated_cost_usd,0.22248225000000096,usd
+wall_time_s,18074.95577788353,seconds

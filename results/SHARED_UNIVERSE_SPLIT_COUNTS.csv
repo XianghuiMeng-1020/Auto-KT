@@ -1,0 +1,13 @@
+dataset,universe,split,learners_with_at_least_one_interaction,interactions,items
+junyi,full_processed,test,24560,4713329,651
+junyi,full_processed,train,85955,16770258,663
+junyi,full_processed,val,12279,2407709,647
+junyi,shared_confirmatory,test,14795,975391,185
+junyi,shared_confirmatory,train,51227,3453633,189
+junyi,shared_confirmatory,val,7291,506311,184
+xes3g5m,full_processed,test,2891,889531,7173
+xes3g5m,full_processed,train,10117,3114054,7457
+xes3g5m,full_processed,val,1445,442789,6799
+xes3g5m,shared_confirmatory,test,2891,630642,5031
+xes3g5m,shared_confirmatory,train,10117,2200794,5232
+xes3g5m,shared_confirmatory,val,1445,311462,4763

@@ -1,0 +1,46 @@
+{
+  "schema_version": "measurement_validity_v1",
+  "datasets": ["xes3g5m", "junyi"],
+  "llm_scoreable_counts": {"xes3g5m": 5363, "junyi": 190},
+  "response_thresholds": [5, 10, 20, 50, 100],
+  "primary_response_threshold": 20,
+  "beta_priors": {
+    "beta_1_1": [1, 1],
+    "beta_2_2": [2, 2],
+    "empirical_bayes": "data_driven"
+  },
+  "rasch": {
+    "estimator_version": "rasch_1pl_jmle_v1",
+    "max_iter": 80,
+    "tol": 1e-4,
+    "seed": 2024,
+    "min_responses_for_fit": 5
+  },
+  "bootstrap": {"n": 500, "seed": 2024},
+  "cv_folds": 5,
+  "cv_seed": 2024,
+  "holm_families": [
+    "authentic_convergent_validity",
+    "incremental_validity",
+    "bucket_contrasts",
+    "synthetic_trend"
+  ],
+  "synthetic": {
+    "dataset": "gsm8k_irt",
+    "cache_path": "artifacts/scores/gsm8k_legacy_difficulty_scores.csv",
+    "item_subset": 200,
+    "num_students": 600,
+    "responses_per_student_min": 20,
+    "responses_per_student_max": 50,
+    "irt_scale": 10.0,
+    "seeds": [2024, 42, 123, 456, 789, 1001, 2025, 314, 2718, 1618],
+    "conditions": {
+      "S0": {"d_llm_weight": 1.0, "d_ind_weight": 0.0, "type": "circular"},
+      "S1": {"d_llm_weight": 0.75, "d_ind_weight": 0.25, "type": "aligned"},
+      "S2": {"d_llm_weight": 0.50, "d_ind_weight": 0.50, "type": "aligned"},
+      "S3": {"d_llm_weight": 0.25, "d_ind_weight": 0.75, "type": "aligned"},
+      "S4": {"d_llm_weight": 0.0, "d_ind_weight": 1.0, "type": "independent"},
+      "S5": {"type": "surface_confounded"}
+    }
+  }
+}

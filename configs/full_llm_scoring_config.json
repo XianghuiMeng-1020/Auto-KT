@@ -1,0 +1,25 @@
+{
+  "schema_version": "full_llm_scoring_v1",
+  "pilot_schema_version": "llm_pilot_v1",
+  "replication_scope": "amendment_010_deterministic_only",
+  "models": ["gpt-4o-mini", "gpt-5.4"],
+  "temperature_deterministic": 0.0,
+  "deterministic_seed": 2024,
+  "max_tokens": 16,
+  "timeout_seconds": 30,
+  "max_retries_transient": 2,
+  "max_retries_format": 1,
+  "parse_success_threshold": 1.0,
+  "full_scoring_budget_usd": 50.0,
+  "checkpoint_every_n": 25,
+  "scoreable_counts": {
+    "xes3g5m": 5363,
+    "junyi": 190
+  },
+  "cost_per_1k_input_tokens_usd": 0.00015,
+  "cost_per_1k_output_tokens_usd": 0.0006,
+  "openai_base_url_env": "OPENAI_BASE_URL",
+  "openai_api_key_env": "OPENAI_API_KEY",
+  "default_openai_base_url": "https://api.openai.com/v1",
+  "content_sufficiency_rule_version": "content_sufficiency_v1"
+}

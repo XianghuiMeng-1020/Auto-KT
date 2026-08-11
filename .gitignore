@@ -1,0 +1,31 @@
+# Raw and derived datasets (never committed; see data/README.md)
+data_raw/
+data_processed/
+datasets/
+
+# Run outputs, checkpoints, logs, caches
+runs/
+checkpoints/
+logs/
+cache/
+*.log
+
+# Internal pipeline bookkeeping (recreated on first run)
+data_manifests/
+
+# Regenerable full-content LLM scoring cache (only sanitized scores are shipped)
+artifacts/scores/raw/
+artifacts/scores/cache/
+artifacts/scores/rationales/
+artifacts/scores/parsed/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.env
+.venv/
+*.egg-info/

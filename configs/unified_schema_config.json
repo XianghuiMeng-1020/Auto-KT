@@ -1,0 +1,15 @@
+{
+  "split_seed": 2024,
+  "train_frac": 0.7,
+  "val_frac": 0.1,
+  "test_frac": 0.2,
+  "min_student_interactions": 10,
+  "split_algorithm_version": "student_shuffle_v1",
+  "hash_salt": "autokt-jla-v1",
+  "frozen_eligible_item_counts": {
+    "xes3g5m": 7618,
+    "junyi": 666
+  },
+  "tie_break_rule": "timestamp_then_position_then_item_id_lex",
+  "response_cooccurrence_min_count": 5
+}

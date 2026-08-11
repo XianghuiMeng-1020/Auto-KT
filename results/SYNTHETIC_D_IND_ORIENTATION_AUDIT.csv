@@ -1,0 +1,3 @@
+stage,seed,spearman_d_llm_d_ind,threshold,replacement_used,distribution_if_replaced
+initial_permutation,2024,0.019548855136725406,0.15,False,standard normal z-scored
+final_d_ind,2024,0.019548855136725406,0.15,False,standard normal z-scored

@@ -1,0 +1,15 @@
+{
+  "dataset": "junyi",
+  "item_fold_seed": 2024,
+  "n_folds": 5,
+  "n_items": 190,
+  "fold_counts": {
+    "0": 38,
+    "1": 38,
+    "2": 38,
+    "3": 38,
+    "4": 38
+  },
+  "file_sha256": "6f9fbce7b82b5746b03a85a4296bc92dc0eea05bed96f5fe6b5e5deb423cb5e2",
+  "item_list_sha256": "bf2eeebdb8379ddb5078b8e70df6d742290011768fae59ea62c10362b0097b6a"
+}

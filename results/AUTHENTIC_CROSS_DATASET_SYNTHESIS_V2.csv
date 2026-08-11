@@ -1,0 +1,5 @@
+synthesis_target,model,datasets,mean_effect,min_effect,max_effect,note
+spearman_llm_vs_test_smoothed_error_v2,gpt-4o-mini,"xes3g5m,junyi",0.17148532941152966,0.10709592942545954,0.23587472939759976,descriptive_two_dataset_summary
+spearman_llm_vs_test_smoothed_error_v2,gpt-5.4,"xes3g5m,junyi",0.14421163429734118,0.11482425577989072,0.17359901281479165,descriptive_two_dataset_summary
+incremental_r2_beyond_surface_v2,B_surface_gpt4o_scalar,"xes3g5m,junyi",0.014833494947889492,0.008473251935895987,0.021193737959882997,descriptive_mean_incremental_r2
+incremental_r2_beyond_surface_v2,C_surface_gpt54_scalar,"xes3g5m,junyi",-0.006531536119116721,-0.014196876323590013,0.0011338040853565712,descriptive_mean_incremental_r2

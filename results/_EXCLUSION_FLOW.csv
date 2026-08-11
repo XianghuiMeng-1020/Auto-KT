@@ -1,0 +1,12 @@
+dataset,stage,count
+xes3g5m,raw_sequence_rows,30965
+xes3g5m,excluded_selectmask_0,1746626
+xes3g5m,excluded_no_content,0
+xes3g5m,valid_interactions_with_content,4446374
+xes3g5m,unique_items_in_valid_interactions,7618
+xes3g5m,excluded_student_lt_min_interactions,0
+xes3g5m,retained_interactions,4446374
+xes3g5m,retained_students,14453
+junyi,raw_interactions,25925992
+junyi,retained_interactions,23891296
+junyi,retained_students,122794

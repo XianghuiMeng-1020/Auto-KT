@@ -1,0 +1,9 @@
+stage,count
+raw_sequence_rows,30965
+excluded_selectmask_0,1746626
+excluded_no_content,0
+valid_interactions_with_content,4446374
+unique_items_in_valid_interactions,7618
+excluded_student_lt_min_interactions,0
+retained_interactions,4446374
+retained_students,14453

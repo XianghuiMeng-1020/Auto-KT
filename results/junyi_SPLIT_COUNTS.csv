@@ -1,0 +1,4 @@
+split_assignment,interactions,students,items
+test,4713329,24560,651
+train,16770258,85955,663
+val,2407709,12279,647

@@ -1,0 +1,16 @@
+junyi/GRU/CharacterLength: ΔStd=0.0019
+junyi/GRU/LLM-5.4: ΔStd=0.0040
+junyi/GRU/LLM-Mini: ΔStd=0.0027
+junyi/GRU/Random-Scalar: ΔStd=0.0022
+junyi/SAKT/CharacterLength: ΔStd=0.0061
+junyi/SAKT/LLM-5.4: ΔStd=0.0098
+junyi/SAKT/LLM-Mini: ΔStd=0.0062
+junyi/SAKT/Random-Scalar: ΔStd=0.0073
+xes3g5m/GRU/CharacterLength: ΔStd=-0.0001
+xes3g5m/GRU/LLM-5.4: ΔStd=-0.0003
+xes3g5m/GRU/LLM-Mini: ΔStd=-0.0000
+xes3g5m/GRU/Random-Scalar: ΔStd=-0.0002
+xes3g5m/SAKT/CharacterLength: ΔStd=0.0002
+xes3g5m/SAKT/LLM-5.4: ΔStd=-0.0004
+xes3g5m/SAKT/LLM-Mini: ΔStd=-0.0001
+xes3g5m/SAKT/Random-Scalar: ΔStd=0.0003

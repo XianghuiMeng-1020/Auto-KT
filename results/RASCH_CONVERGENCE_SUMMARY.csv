@@ -1,0 +1,7 @@
+converged,iterations,max_delta,n_observations,n_students,n_items,n_identifiable_items,n_extreme_items,dataset,reference_scope,split_source
+False,80,,2200794,10117,5232,4522,189,xes3g5m,deployable_train,train
+False,80,,630642,2891,5031,3930,328,xes3g5m,held_out_test,test
+False,80,,3142898,14453,5363,4664,172,xes3g5m,oracle_diagnostic,all
+False,80,,3453633,51227,189,188,1,junyi,deployable_train,train
+False,80,,975391,14795,185,183,0,junyi,held_out_test,test
+False,80,,4935335,73313,190,188,1,junyi,oracle_diagnostic,all

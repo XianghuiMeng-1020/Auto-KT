@@ -1,0 +1,5 @@
+dataset,model,input_tokens,output_tokens,request_count,retry_count,wall_time_s,estimated_cost_usd,cost_per_scored_item
+xes3g5m,gpt-4o-mini,0,0,400,0,1192.7780718803406,0.0,0.0
+xes3g5m,gpt-5.4,0,0,400,0,1192.7780718803406,0.0,0.0
+junyi,gpt-4o-mini,0,0,400,0,1192.7780718803406,0.0,0.0
+junyi,gpt-5.4,0,0,400,0,1192.7780718803406,0.0,0.0

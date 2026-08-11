@@ -1,0 +1,11 @@
+dataset,model,extraction_content_type,n_reviews,pass_rate,content_limited_rate,invented_content_rate,rationale_inconsistent_rate,outcome_information_invented_rate,format_failure_rate,other_rate
+xes3g5m,gpt-4o-mini,all,20,0.8,0.2,0.0,0.0,0.0,0.0,0.0
+xes3g5m,gpt-5.4,all,20,0.8,0.2,0.0,0.0,0.0,0.0,0.0
+junyi,gpt-4o-mini,all,20,0.2,0.75,0.05,0.0,0.0,0.0,0.0
+junyi,gpt-5.4,all,20,0.2,0.75,0.05,0.0,0.0,0.0,0.0
+junyi,gpt-4o-mini,dynamic_template,9,0.4444444444444444,0.5555555555555556,0.0,0.0,0.0,0.0,0.0
+junyi,gpt-5.4,dynamic_template,9,0.4444444444444444,0.5555555555555556,0.0,0.0,0.0,0.0,0.0
+junyi,gpt-4o-mini,question_div_image_graphie,9,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+junyi,gpt-5.4,question_div_image_graphie,9,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+junyi,gpt-4o-mini,title_fallback,2,0.0,0.5,0.5,0.0,0.0,0.0,0.0
+junyi,gpt-5.4,title_fallback,2,0.0,0.5,0.5,0.0,0.0,0.0,0.0

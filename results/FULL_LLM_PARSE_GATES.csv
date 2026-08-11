@@ -1,0 +1,5 @@
+dataset,model,expected_items,completed_items,valid_first_pass,valid_after_retry,failed_count,missing_field_count,out_of_range_count,non_finite_count,rationale_violation_count,answer_disclosure_count,duplicate_response_count,cache_hit_count,pilot_import_count,paid_call_count
+xes3g5m,gpt-4o-mini,5363,5363,5363,5363,0,0,0,0,0,0,0,71,71,5292
+xes3g5m,gpt-5.4,5363,5363,5362,5363,0,0,0,0,0,0,0,71,71,5292
+junyi,gpt-4o-mini,190,190,190,190,0,0,0,0,0,0,0,33,33,157
+junyi,gpt-5.4,190,190,190,190,0,0,0,0,0,0,0,33,33,157
