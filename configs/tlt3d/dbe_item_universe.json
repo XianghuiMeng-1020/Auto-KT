@@ -1,0 +1,412 @@
+{
+  "dataset": "DBE-KT22",
+  "phase0_audit_commit": "6679cf66ed0cc99ded2525d564c4249611cd1cc0",
+  "source_questions_sha256": "de82e5f851f6488622572208df300b41d2a878bcaf5d9e515b27de72bd577c3b",
+  "source_choices_sha256": "cb834b093b11f4e4c06f1d440fd6e2f162f05ce63f32fbe4ca5304b00f60685b",
+  "source_transaction_sha256": "c5f554ed776bce9ce9a556b21afcab894e963bf8ea5adae94668a98282c13af6",
+  "raw_items": 212,
+  "included_item_ids": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    214
+  ],
+  "included_count": 166,
+  "excluded": [
+    {
+      "item_id": 219,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 218,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 217,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 216,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 213,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 212,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 211,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 210,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 209,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 208,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 200,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 178,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 177,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 176,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 175,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 174,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 173,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 172,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 171,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 170,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 169,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 168,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 167,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 166,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 165,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 164,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 163,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 162,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 161,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 160,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 159,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 158,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 157,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 156,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 155,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 154,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 153,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 152,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 151,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 150,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 149,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 148,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 147,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 146,
+      "text_complete_status": "EXCLUDE_REQUIRED_IMAGE",
+      "exclusion_reason": "image_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 92,
+      "text_complete_status": "EXCLUDE_REQUIRED_DIAGRAM",
+      "exclusion_reason": "diagram_reference_with_insufficient_standalone_text"
+    },
+    {
+      "item_id": 91,
+      "text_complete_status": "EXCLUDE_REQUIRED_DIAGRAM",
+      "exclusion_reason": "diagram_reference_with_insufficient_standalone_text"
+    }
+  ],
+  "excluded_count": 46,
+  "frozen_at_utc": "2026-08-12T12:54:10.900281+00:00",
+  "item_universe_hash": "d62fb95604bac94e65adda498dc21175e66ce75198836996f5f53695c96e38a6"
+}

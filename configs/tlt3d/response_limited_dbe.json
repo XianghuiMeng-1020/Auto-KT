@@ -1,0 +1,71 @@
+{
+  "phase": "TLT3D_P1",
+  "status": "FROZEN_SPEC_NOT_RUN",
+  "source_config": "scripts/kt/limited_kt_config.json",
+  "sakt_extension_config": "scripts/kt/tlt_extension_config.json",
+  "backbones": {
+    "GRU": {
+      "config": "limited_kt_config.json",
+      "exposure_levels": [
+        0,
+        1,
+        3,
+        5,
+        10,
+        20,
+        "warm"
+      ]
+    },
+    "SAKT": {
+      "config": "tlt_extension_config.json",
+      "limited_exposures": [
+        1,
+        3,
+        5,
+        10,
+        20,
+        "warm"
+      ]
+    }
+  },
+  "seeds": [
+    2024,
+    42,
+    123,
+    456,
+    789
+  ],
+  "mask_seed": 2024,
+  "gru_conditions": [
+    "Standard",
+    "LLM-Mini",
+    "LLM-5.4",
+    "Random-Scalar",
+    "TrainEmpDiff",
+    "OracleEmpDiff"
+  ],
+  "sakt_limited_conditions_note": "tlt_extension also includes CharacterLength; GRU limited_kt_config does NOT register CharacterLength",
+  "primary_metric": "log_loss",
+  "secondary_metrics": [
+    "auc",
+    "brier",
+    "ece",
+    "accuracy"
+  ],
+  "dbe_compatibility": {
+    "exposure_grid": "INSTANTIABLE",
+    "TrainEmpDiff": "INSTANTIABLE from train first-observed or all-train events per existing builder",
+    "OracleEmpDiff": "NON_DEPLOYABLE_KEEP_AS_IN_EXISTING",
+    "CharacterLength_on_GRU_limited": "NOT_IN_AUTHORITATIVE_GRU_CONFIG \u2014 do not add post-hoc",
+    "Random_Scalar_after_scores": "resample from gpt-4o-mini marginals (limited_kt_common)"
+  },
+  "hyperparameters": {
+    "emb": 32,
+    "hidden": 32,
+    "max_seq_len": 80,
+    "batch": 64,
+    "lr": 0.001,
+    "epochs": 4,
+    "patience": 2
+  }
+}

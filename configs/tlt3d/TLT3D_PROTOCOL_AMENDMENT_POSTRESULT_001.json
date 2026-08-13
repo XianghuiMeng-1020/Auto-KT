@@ -1,0 +1,25 @@
+{
+  "amendment_id": "POST_RESULT_INFERENTIAL_REPAIR_001",
+  "timing": "after_family_B_effect_estimates_observed",
+  "reason": "missing_family_B_pvalue_definition",
+  "scientific_inputs_changed": false,
+  "effect_estimates_changed": false,
+  "test": "paired_prediction_label_randomization",
+  "test_full_name": "PAIRED_PREDICTION_LABEL_RANDOMIZATION_TEST",
+  "sidedness": "two_sided",
+  "permutations": 100000,
+  "master_seed": 2024,
+  "rng_derivation": "digest=SHA256(f\"{amendment_id}|{hypothesis_id}|{master_seed}\"); seed_int=int.from_bytes(digest[:8],'big'); np.random.default_rng(seed_int)",
+  "statistic": "delta_oof_r2",
+  "family_size": 6,
+  "multiplicity": "holm_within_family_B",
+  "status": "POST_RESULT_TRANSPARENT_REPAIR",
+  "p_formula": "p_raw = (1 + #{|T_b| >= |T_obs|}) / (B + 1)",
+  "classification": {
+    "delta_r2": "CONFIRMATORY_EFFECT_ESTIMATE",
+    "bootstrap_ci": "CONFIRMATORY_PRE_SPECIFIED_UNCERTAINTY",
+    "repaired_p": "POST_RESULT_INFERENTIAL_COMPLETION",
+    "holm_repaired_p": "POST_RESULT_INFERENTIAL_COMPLETION"
+  },
+  "generated_at_utc": "2026-08-12T19:59:13.935126+00:00"
+}

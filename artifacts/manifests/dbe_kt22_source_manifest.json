@@ -1,0 +1,220 @@
+{
+  "dataset": "dbe_kt22",
+  "source_of_record": "Australian Data Archive Dataverse",
+  "persistent_id": "doi:10.26193/6DZWOH",
+  "access_status": "SUCCESS_OFFICIAL",
+  "download_utc": "2026-08-12T07:19:24.528371+00:00",
+  "dataset_version": "1.0",
+  "license_access_note": "ADA Custom Dataset Terms; Public files; unrestricted access policy stated by authors; cite DOI.",
+  "official_archives": [
+    {
+      "original_filename": "1_DBE_KT22_file_descriptions_100102.xlsx",
+      "relative_path": "data/external/dbe_kt22/raw/official/1_DBE_KT22_file_descriptions_100102.xlsx",
+      "byte_size": 10458,
+      "sha256": "d531d81f5b3ef90cf9679a3900707c0f3c3488c71f2cf1ba8c7ed14aa53116db",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "compression_type": "xlsx"
+    },
+    {
+      "original_filename": "1_Script_to_generate_sequences_100102_py.zip",
+      "relative_path": "data/external/dbe_kt22/raw/official/1_Script_to_generate_sequences_100102_py.zip",
+      "byte_size": 1908,
+      "sha256": "1da85847b278e97e731867c8c485e6c0d127bebee22083100c90e296fb4b4dda",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "compression_type": "zip"
+    },
+    {
+      "original_filename": "2_DBE_KT22_Practice_Sequences_100102_json.zip",
+      "relative_path": "data/external/dbe_kt22/raw/official/2_DBE_KT22_Practice_Sequences_100102_json.zip",
+      "byte_size": 625548,
+      "sha256": "071b66235579091eb1b391b37e01cd0d48302265dd51e44848a7781bbcff08e3",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "compression_type": "zip"
+    },
+    {
+      "original_filename": "2_DBE_KT22_datafiles_100102_csv.zip",
+      "relative_path": "data/external/dbe_kt22/raw/official/2_DBE_KT22_datafiles_100102_csv.zip",
+      "byte_size": 2721804,
+      "sha256": "8aaeb560f5f0b5bd5ad17bbbc0d9d5187c4f7a54a9d1f39ebc77f8d84575e567",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "compression_type": "zip"
+    }
+  ],
+  "decompressed_csv": [
+    {
+      "original_filename": "KC_Relationships.csv",
+      "relative_path": "data/external/dbe_kt22/raw/official_extracted/csv/KC_Relationships.csv",
+      "byte_size": 2059,
+      "sha256": "692c1a3f390c40de3e8a6108cb48352df0e283d5abf15727acad2ccd41ce042c",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "format": "csv",
+      "row_count": 202,
+      "columns": [
+        "id",
+        "from_knowledgecomponent_id",
+        "to_knowledgecomponent_id"
+      ]
+    },
+    {
+      "original_filename": "KCs.csv",
+      "relative_path": "data/external/dbe_kt22/raw/official_extracted/csv/KCs.csv",
+      "byte_size": 15076,
+      "sha256": "30af2574cc68460ba8d9518fc2ec243b2494ff14b5dff9659e4de87dc3c2b510",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "format": "csv",
+      "row_count": 98,
+      "columns": [
+        "id",
+        "name",
+        "description"
+      ]
+    },
+    {
+      "original_filename": "Question_Choices.csv",
+      "relative_path": "data/external/dbe_kt22/raw/official_extracted/csv/Question_Choices.csv",
+      "byte_size": 27328,
+      "sha256": "cb834b093b11f4e4c06f1d440fd6e2f162f05ce63f32fbe4ca5304b00f60685b",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "format": "csv",
+      "row_count": 756,
+      "columns": [
+        "id",
+        "choice_text",
+        "is_correct",
+        "question_id"
+      ]
+    },
+    {
+      "original_filename": "Question_KC_Relationships.csv",
+      "relative_path": "data/external/dbe_kt22/raw/official_extracted/csv/Question_KC_Relationships.csv",
+      "byte_size": 4333,
+      "sha256": "e9726b6d87d30c352874abf0f9e1be9c066048dbbcf399e946e2eeb59d7065f3",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "format": "csv",
+      "row_count": 402,
+      "columns": [
+        "id",
+        "question_id",
+        "knowledgecomponent_id"
+      ]
+    },
+    {
+      "original_filename": "Questions.csv",
+      "relative_path": "data/external/dbe_kt22/raw/official_extracted/csv/Questions.csv",
+      "byte_size": 162333,
+      "sha256": "de82e5f851f6488622572208df300b41d2a878bcaf5d9e515b27de72bd577c3b",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "format": "csv",
+      "row_count": 212,
+      "columns": [
+        "id",
+        "question_rich_text",
+        "question_title",
+        "explanation",
+        "hint_text",
+        "question_text",
+        "difficulty"
+      ]
+    },
+    {
+      "original_filename": "Specialization.csv",
+      "relative_path": "data/external/dbe_kt22/raw/official_extracted/csv/Specialization.csv",
+      "byte_size": 269,
+      "sha256": "847443f0e2a31bc591a04a0461576014f4fb58680c68a8bbd99bff535895b71b",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "format": "csv",
+      "row_count": 8,
+      "columns": [
+        "id",
+        "title"
+      ]
+    },
+    {
+      "original_filename": "Student_Specialization.csv",
+      "relative_path": "data/external/dbe_kt22/raw/official_extracted/csv/Student_Specialization.csv",
+      "byte_size": 4154,
+      "sha256": "9832f9df1c674ca3f686db8de38b3ebda4f6f9ffdda07653af20a9924680020b",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "format": "csv",
+      "row_count": 408,
+      "columns": [
+        "id",
+        "specialization_id",
+        "student_id"
+      ]
+    },
+    {
+      "original_filename": "Transaction.csv",
+      "relative_path": "data/external/dbe_kt22/raw/official_extracted/csv/Transaction.csv",
+      "byte_size": 16882652,
+      "sha256": "c5f554ed776bce9ce9a556b21afcab894e963bf8ea5adae94668a98282c13af6",
+      "exists": true,
+      "source_dataset": "dbe_kt22",
+      "source_of_record": "doi:10.26193/6DZWOH",
+      "encoding": "utf-8",
+      "delimiter": ",",
+      "format": "csv",
+      "row_count": 161953,
+      "columns": [
+        "id",
+        "selection_change",
+        "start_time",
+        "end_time",
+        "difficulty_feedback",
+        "trust_feedback",
+        "answer_state",
+        "answer_text",
+        "student_id",
+        "hint_used",
+        "question_id",
+        "answer_choice_id",
+        "is_hidden"
+      ]
+    }
+  ],
+  "ada_md5_verified": {
+    "2_DBE_KT22_datafiles_100102_csv.zip": "098d7ea4a93b10ef74c736f55a7c1c34",
+    "2_DBE_KT22_Practice_Sequences_100102_json.zip": "14816cbaeb574715c0dc8aae63744de3",
+    "1_Script_to_generate_sequences_100102_py.zip": "c79ca985100c54d87e2295357fb9186a",
+    "1_DBE_KT22_file_descriptions_100102.xlsx": "b558ba42ce0d715c7111b07bb1a4bd26"
+  },
+  "hf_mirror_checksum_match_note": "Prior HF mirror Unggi/dbe-kt22_raw_data CSV SHA-256 matched official ADA extraction byte-for-byte; official ADA used as source of record.",
+  "acquisition_method": "ADA Dataverse browser session (Anubis PoW) + fetch /api/access/datafile/{id}; MD5 verified against Dataverse metadata",
+  "official_archives_total_bytes": 3359718
+}

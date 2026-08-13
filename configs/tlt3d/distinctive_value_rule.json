@@ -1,0 +1,66 @@
+{
+  "phase": "TLT3D_P12",
+  "name": "distinctive_content_derived_difficulty_utility",
+  "claim_scope": "A content-derived LLM difficulty signal is distinctively useful for KT only if ALL of the following hold under frozen uncertainty procedures",
+  "requirements": [
+    {
+      "id": "R1",
+      "rule": "directionally_favorable_vs_Standard_on_primary_metric",
+      "maps_to": "A predictive improvement over Standard"
+    },
+    {
+      "id": "R2",
+      "rule": "statistically_supported_under_frozen_paired_or_CI_procedure",
+      "maps_to": "Family C/D Holm+CI cells"
+    },
+    {
+      "id": "R3",
+      "rule": "not_equivalently_reproduced_by_setting_specific_random_control",
+      "maps_to": "B / Random-ResampledScore (C) or Random-PermutedScore (D)"
+    },
+    {
+      "id": "R4",
+      "rule": "not_equivalently_reproduced_by_CharacterLength_where_that_comparator_is_in_frozen_family",
+      "maps_to": "C applies in Family D only (D1); N/A for Family C1"
+    },
+    {
+      "id": "R5",
+      "rule": "reasonably_consistent_across_evidence_regimes_and_or_backbones_not_a_single_isolated_cell",
+      "maps_to": "E consistent evidence; isolated single-cell gains insufficient"
+    }
+  ],
+  "primary_metric": "log_loss",
+  "orientation": {
+    "log_loss": "lower_better",
+    "auc": "higher_better"
+  },
+  "applies_to": [
+    "response_limited_KT",
+    "genuine_unseen_item_KT"
+  ],
+  "prohibits": [
+    "post_hoc_metric_switching",
+    "post_hoc_condition_addition",
+    "DBE_specific_threshold_relaxation"
+  ],
+  "aligned_families": {
+    "C": "OPTION_C1",
+    "D": "OPTION_D1"
+  },
+  "control_name_map": {
+    "Random_Scalar_legacy_name": "Random-Scalar (implementation name)",
+    "Random-ResampledScore": "Family C comparator (response-limited)",
+    "Random-PermutedScore": "Family D comparator (genuine unseen)",
+    "CharacterLength": "Family D confirmatory comparator; ABSENT from Family C (C1)"
+  },
+  "claim_interpretation": {
+    "A_over_Standard": "R1",
+    "B_not_random": "R3",
+    "C_not_charlen_where_applicable": "R4",
+    "D_isolated_cell_insufficient": "negation of R5",
+    "E_consistency_required": "R5"
+  },
+  "compatible_with_C1_D1": true,
+  "unresolved_conflict": false,
+  "substantive_threshold_change": false
+}

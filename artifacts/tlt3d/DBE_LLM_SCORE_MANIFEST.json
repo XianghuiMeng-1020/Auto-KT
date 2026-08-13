@@ -1,0 +1,40 @@
+{
+  "protocol_tag": "tlt3d-pre-dbe-scoring-v1.2",
+  "protocol_commit": "a459e34a24240c03ba4dbe4b1d0185e42eaf4377",
+  "dataset": "DBE-KT22",
+  "items_expected": 166,
+  "models": [
+    "gpt-4o-mini",
+    "gpt-5.4"
+  ],
+  "expected_scores": 332,
+  "accepted_scores": 332,
+  "prompt_hash": "d99a9645219033e713bb78fd31dc3d74826bf31adf1a0e5977f30fcbda911c35",
+  "item_universe_hash": "d62fb95604bac94e65adda498dc21175e66ce75198836996f5f53695c96e38a6",
+  "score_csv_sha256": "484dd79a140372fcbda66275aa472505de47f0852cd37992692ac87c97e22f64",
+  "raw_model_artifact_hashes": {
+    "gpt-4o-mini": "8929921d015cf3e253f40ad9e10ea0360aa84b4ac2620d5e39f22c2823c4ec5a",
+    "gpt-5.4": "a32d7cba6d860c29a2afe0e39bc188e033b1049fad38fca758701f5150ef11ec"
+  },
+  "items_parquet_sha256": "d79326de56ab4e9bc27229b5055b294e14c88345bc8be982da26257ade380fdf",
+  "prompt_file_sha256": "3e3de4434ea72ecbacbd210d7b9ae5d92d32c2242cc8d1b2262f7139ea2ff83c",
+  "run_started_utc": "2026-08-12T19:32:27Z",
+  "run_completed_utc": "2026-08-12T19:37:37Z",
+  "hypothesis_tests_run": false,
+  "learner_outcome_join_performed": false,
+  "kt_models_trained": false,
+  "requested_model_ids": [
+    "gpt-4o-mini",
+    "gpt-5.4"
+  ],
+  "resolved_model_ids": {
+    "gpt-4o-mini": [
+      "gpt-4o-mini-2024-07-18"
+    ],
+    "gpt-5.4": [
+      "gpt-5.4-2026-03-05"
+    ]
+  },
+  "cross_model_same_item_ids": true,
+  "cross_model_identical_score_vectors": false
+}

@@ -1,0 +1,51 @@
+{
+  "model": {
+    "emb_dim": 32,
+    "hidden_dim": 32,
+    "max_seq_len": 80,
+    "batch_size": 64,
+    "lr": 0.001,
+    "max_epochs": 4,
+    "early_stop_patience": 2,
+    "mask_seed": 2024
+  },
+  "conditions": {
+    "Standard": {
+      "use_scalar": false,
+      "scalar_source": null,
+      "deployable": true
+    },
+    "LLM-Mini": {
+      "use_scalar": true,
+      "scalar_source": "gpt-4o-mini",
+      "deployable": true
+    },
+    "LLM-5.4": {
+      "use_scalar": true,
+      "scalar_source": "gpt-5.4",
+      "deployable": true
+    },
+    "Random-Scalar": {
+      "use_scalar": true,
+      "scalar_source": "random_matched",
+      "deployable": true
+    },
+    "TrainEmpDiff": {
+      "use_scalar": true,
+      "scalar_source": "train_empirical",
+      "deployable": true
+    }
+  },
+  "train_emp_prior": [
+    1,
+    1
+  ],
+  "seeds": [
+    2024,
+    42,
+    123,
+    456,
+    789
+  ],
+  "mask_seed": 2024
+}

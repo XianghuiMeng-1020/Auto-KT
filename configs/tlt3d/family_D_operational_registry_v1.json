@@ -1,0 +1,1461 @@
+{
+  "registry_id": "family_D_operational_registry_v1",
+  "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+  "D_OPERATIONALIZATION_STATUS": "REPAIR_REQUIRED_THEN_SEALED",
+  "family_size": 36,
+  "backbones": [
+    "GRU",
+    "SAKT"
+  ],
+  "comparators": [
+    "Standard",
+    "Random-PermutedScore",
+    "CharacterLength"
+  ],
+  "llms": [
+    "gpt-4o-mini",
+    "gpt-5.4"
+  ],
+  "hypotheses": [
+    {
+      "hypothesis_id": "D1_XES_GRU_Mini_vs_Std",
+      "dataset": "xes3g5m",
+      "backbone": "GRU",
+      "llm": "gpt-4o-mini",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_GRU_Mini_vs_RandPermute",
+      "dataset": "xes3g5m",
+      "backbone": "GRU",
+      "llm": "gpt-4o-mini",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_GRU_Mini_vs_CharLen",
+      "dataset": "xes3g5m",
+      "backbone": "GRU",
+      "llm": "gpt-4o-mini",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_GRU_5.4_vs_Std",
+      "dataset": "xes3g5m",
+      "backbone": "GRU",
+      "llm": "gpt-5.4",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_GRU_5.4_vs_RandPermute",
+      "dataset": "xes3g5m",
+      "backbone": "GRU",
+      "llm": "gpt-5.4",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_GRU_5.4_vs_CharLen",
+      "dataset": "xes3g5m",
+      "backbone": "GRU",
+      "llm": "gpt-5.4",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_SAKT_Mini_vs_Std",
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "llm": "gpt-4o-mini",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_SAKT_Mini_vs_RandPermute",
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "llm": "gpt-4o-mini",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_SAKT_Mini_vs_CharLen",
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "llm": "gpt-4o-mini",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_SAKT_5.4_vs_Std",
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "llm": "gpt-5.4",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_SAKT_5.4_vs_RandPermute",
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "llm": "gpt-5.4",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_XES_SAKT_5.4_vs_CharLen",
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "llm": "gpt-5.4",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_GRU_Mini_vs_Std",
+      "dataset": "junyi",
+      "backbone": "GRU",
+      "llm": "gpt-4o-mini",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_GRU_Mini_vs_RandPermute",
+      "dataset": "junyi",
+      "backbone": "GRU",
+      "llm": "gpt-4o-mini",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_GRU_Mini_vs_CharLen",
+      "dataset": "junyi",
+      "backbone": "GRU",
+      "llm": "gpt-4o-mini",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_GRU_5.4_vs_Std",
+      "dataset": "junyi",
+      "backbone": "GRU",
+      "llm": "gpt-5.4",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_GRU_5.4_vs_RandPermute",
+      "dataset": "junyi",
+      "backbone": "GRU",
+      "llm": "gpt-5.4",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_GRU_5.4_vs_CharLen",
+      "dataset": "junyi",
+      "backbone": "GRU",
+      "llm": "gpt-5.4",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_SAKT_Mini_vs_Std",
+      "dataset": "junyi",
+      "backbone": "SAKT",
+      "llm": "gpt-4o-mini",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_SAKT_Mini_vs_RandPermute",
+      "dataset": "junyi",
+      "backbone": "SAKT",
+      "llm": "gpt-4o-mini",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_SAKT_Mini_vs_CharLen",
+      "dataset": "junyi",
+      "backbone": "SAKT",
+      "llm": "gpt-4o-mini",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_SAKT_5.4_vs_Std",
+      "dataset": "junyi",
+      "backbone": "SAKT",
+      "llm": "gpt-5.4",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_SAKT_5.4_vs_RandPermute",
+      "dataset": "junyi",
+      "backbone": "SAKT",
+      "llm": "gpt-5.4",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_Junyi_SAKT_5.4_vs_CharLen",
+      "dataset": "junyi",
+      "backbone": "SAKT",
+      "llm": "gpt-5.4",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_GRU_Mini_vs_Std",
+      "dataset": "dbe_kt22",
+      "backbone": "GRU",
+      "llm": "gpt-4o-mini",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_GRU_Mini_vs_RandPermute",
+      "dataset": "dbe_kt22",
+      "backbone": "GRU",
+      "llm": "gpt-4o-mini",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_GRU_Mini_vs_CharLen",
+      "dataset": "dbe_kt22",
+      "backbone": "GRU",
+      "llm": "gpt-4o-mini",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_GRU_5.4_vs_Std",
+      "dataset": "dbe_kt22",
+      "backbone": "GRU",
+      "llm": "gpt-5.4",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_GRU_5.4_vs_RandPermute",
+      "dataset": "dbe_kt22",
+      "backbone": "GRU",
+      "llm": "gpt-5.4",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_GRU_5.4_vs_CharLen",
+      "dataset": "dbe_kt22",
+      "backbone": "GRU",
+      "llm": "gpt-5.4",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_SAKT_Mini_vs_Std",
+      "dataset": "dbe_kt22",
+      "backbone": "SAKT",
+      "llm": "gpt-4o-mini",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_SAKT_Mini_vs_RandPermute",
+      "dataset": "dbe_kt22",
+      "backbone": "SAKT",
+      "llm": "gpt-4o-mini",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_SAKT_Mini_vs_CharLen",
+      "dataset": "dbe_kt22",
+      "backbone": "SAKT",
+      "llm": "gpt-4o-mini",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_SAKT_5.4_vs_Std",
+      "dataset": "dbe_kt22",
+      "backbone": "SAKT",
+      "llm": "gpt-5.4",
+      "comparator": "Standard",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_SAKT_5.4_vs_RandPermute",
+      "dataset": "dbe_kt22",
+      "backbone": "SAKT",
+      "llm": "gpt-5.4",
+      "comparator": "Random-PermutedScore",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    },
+    {
+      "hypothesis_id": "D1_DBE_SAKT_5.4_vs_CharLen",
+      "dataset": "dbe_kt22",
+      "backbone": "SAKT",
+      "llm": "gpt-5.4",
+      "comparator": "CharacterLength",
+      "primary_metric": "log_loss",
+      "confirmatory_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeds": [
+        2024,
+        42,
+        123,
+        456,
+        789
+      ],
+      "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+      "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+      "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+      "inferential_unit": "training_seed",
+      "inferential_test": "two_sided_one_sample_t_test_on_five_seed_pooled_fold_deltas",
+      "df": 4,
+      "multiplicity": "holm_within_family_D_exactly_36",
+      "evaluation_unit": "first_evaluable_learner_x_target_item_interaction",
+      "prediction_pairing_unit": "same_dataset_backbone_fold_seed_evaluation_IDs",
+      "classification": "CONFIRMATORY_POSTRESULT_OPERATIONALIZATION_REPAIRED",
+      "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "artifact_condition_alias": {
+        "Random-PermutedScore": "Random-Scalar",
+        "LLM-Mini": "LLM-Mini",
+        "LLM-5.4": "LLM-5.4",
+        "Standard": "Standard",
+        "CharacterLength": "CharacterLength"
+      }
+    }
+  ]
+}

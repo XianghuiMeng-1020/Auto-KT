@@ -1,0 +1,33 @@
+{
+  "dataset": "DBE-KT22",
+  "raw_items": 212,
+  "text_complete_items": 166,
+  "eligible_primary_items": 166,
+  "learners": 1253,
+  "eligible_learners_min10": 1120,
+  "interactions": 127098,
+  "kt_interactions_in_split": 126635,
+  "learner_split_hash": "65d13de13e7c3a8b366c63628cab3e7ef3f2a67b8eae7cde1aab4e1a53d627dc",
+  "item_universe_hash": "d62fb95604bac94e65adda498dc21175e66ce75198836996f5f53695c96e38a6",
+  "unseen_fold_hash": "28efbf33c231772a3565056367c4bf6dfa62bdf553abcfd8397aa9d9037d4e0a",
+  "fold_sizes": {
+    "0": 34,
+    "1": 33,
+    "2": 33,
+    "3": 33,
+    "4": 33
+  },
+  "primary_threshold": 20,
+  "items_test_first_observed_ge20": 166,
+  "llm_scores_present": false,
+  "adapter_version": "tlt3d_prepare_dbe_v1",
+  "base_commit": "05c854fe5bc0e40361540da7053317af3ebed3e0",
+  "phase0_audit_commit": "6679cf66ed0cc99ded2525d564c4249611cd1cc0",
+  "source_transaction_sha256": "c5f554ed776bce9ce9a556b21afcab894e963bf8ea5adae94668a98282c13af6",
+  "canonical_items_sha256": "d79326de56ab4e9bc27229b5055b294e14c88345bc8be982da26257ade380fdf",
+  "split_seed": 2024,
+  "item_fold_seed": 2024,
+  "mask_seed": 2024,
+  "correctness_disagreements": 704,
+  "frozen_at_utc": "2026-08-12T12:54:11.858051+00:00"
+}

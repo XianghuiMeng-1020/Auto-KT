@@ -90,3 +90,12 @@ data_processed/
 All item and student identifiers in `data_processed/` are hashed
 (`item_id_hash`, `student_id_hash`); no raw item text or learner-identifying
 information is written outside your local `data_processed/` directory.
+
+## DBE-KT22 (journal extension)
+
+DBE-KT22 is used as an external authentic dataset in the IEEE TLT extension.
+Raw DBE files are **not** redistributed here. Obtain the public release from the
+dataset authors / hosting venue cited in the manuscript, then place derived
+tables under your local `data/external/dbe_kt22/` layout as expected by
+`scripts/tlt3d_prepare_dbe.py`. Sanitized confirmatory LLM scores (no item text)
+are already provided in `artifacts/tlt3d/dbe_llm_scores_confirmatory.csv`.

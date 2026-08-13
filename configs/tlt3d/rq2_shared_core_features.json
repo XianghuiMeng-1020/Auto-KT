@@ -1,0 +1,30 @@
+{
+  "phase": "TLT3D_P11",
+  "primary_shared_core": [
+    "char_length",
+    "token_length",
+    "sentence_count",
+    "number_count",
+    "math_symbol_count",
+    "equation_count",
+    "answer_option_count"
+  ],
+  "feature_definitions": {
+    "char_length": "len(learner_visible_item_text)",
+    "token_length": "whitespace_token_count(learner_visible_item_text)",
+    "sentence_count": "sentence_split_count(learner_visible_item_text); may be 1 for short stems",
+    "number_count": "regex count of numeric tokens",
+    "math_symbol_count": "regex count of math/relational symbols; zeros permitted for non-math DBE",
+    "equation_count": "count of equality-like symbols; zeros permitted",
+    "answer_option_count": "n labeled choices if MCQ; 0 if open-ended / unknown"
+  },
+  "zeros_permitted_when_structurally_absent": true,
+  "excluded_from_primary": {
+    "concept_count": "SECONDARY_METADATA_FEATURE",
+    "expert_difficulty": "SECONDARY_CONSTRUCT_ONLY",
+    "log_train_exposure": "response-derived; not in shared-core primary",
+    "held_out_learner_statistics": "forbidden"
+  },
+  "legacy_richer_xes_junyi_model": "SENSITIVITY_ONLY",
+  "compatibility_gate": "PASS"
+}

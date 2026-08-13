@@ -1,0 +1,33 @@
+{
+  "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+  "timing": "after_existing_xes_junyi_unseen_results_before_dbe_unseen_training",
+  "chronology_permanent": "AFTER_EXISTING_XES_JUNYI_UNSEEN_RESULTS_EXISTED_AND_BEFORE_ANY_DBE_GENUINE_UNSEEN_TRAINING",
+  "reason": "family_D_cross_fold_seed_aggregation_was_incomplete",
+  "family": "D",
+  "fold_role": "collective_out_of_fold_evaluation_not_independent_replicates",
+  "within_seed_aggregation": "prediction_weighted_pooled_log_loss_across_all_target_folds",
+  "within_seed_aggregation_detail": "LL_pooled(c,s)=log_loss(concat_f predictions) equivalently sum_f n(s,f)*LL(c,s,f)/sum_f n(s,f); NOT unweighted mean of fold LLs",
+  "effect": "comparator_pooled_log_loss_minus_llm_pooled_log_loss",
+  "direction_convention": "positive_means_LLM_better_lower_log_loss",
+  "seeds": [
+    2024,
+    42,
+    123,
+    456,
+    789
+  ],
+  "inferential_unit": "training_seed",
+  "inferential_test": "two_sided_one_sample_t_test",
+  "df": 4,
+  "n_seeds": 5,
+  "family_size": 36,
+  "multiplicity": "holm_within_family_D",
+  "primary_metric": "log_loss",
+  "auc_status": "SECONDARY_NOT_IN_FAMILY_D",
+  "dbe_unseen_training_started_before_amendment": false,
+  "scientific_inputs_changed": false,
+  "status": "POST_RESULT_TRANSPARENT_OPERATIONALIZATION_REPAIR",
+  "base_result_commit_response_limited": "2d1206090074aa49f937d77955bc1e8d6aca22bf",
+  "family_c_amendment": "0609954254b82fa689c1f228eb486ed823a23ef6",
+  "sealed_protocol": "a459e34a24240c03ba4dbe4b1d0185e42eaf4377"
+}

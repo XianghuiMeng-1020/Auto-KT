@@ -1,0 +1,9 @@
+component,specified_before_relevant_result,timing,amendment_id,final_reporting_status,manuscript_disclosure_required
+Family A,True,pre-result confirmatory,NONE,PRE_RESULT_CONFIRMATORY,False
+Family B effect,True,pre-result frozen effect definition,NONE,PRE_RESULT_FROZEN,False
+Family B CI,True,pre-result frozen bootstrap CI,NONE,PRE_RESULT_FROZEN,False
+Family B p-value,False,after Family-B effect estimates observed,POST_RESULT_INFERENTIAL_REPAIR_001,POST_RESULT_INFERENTIAL_REPAIR,True
+Family C membership,True,pre-result OPTION_C1 frozen,NONE,PRE_RESULT_FROZEN,False
+Family C operationalization,False,after XES/Junyi limited results; before DBE limited training,POST_RESULT_OPERATIONALIZATION_REPAIR_002,POST_RESULT_OPERATIONALIZATION_REPAIR,True
+Family D membership,True,pre-result OPTION_D1 frozen,NONE,PRE_RESULT_FROZEN,False
+Family D operationalization,False,after XES/Junyi unseen results; before DBE unseen training,POST_RESULT_OPERATIONALIZATION_REPAIR_003,POST_RESULT_OPERATIONALIZATION_REPAIR,True

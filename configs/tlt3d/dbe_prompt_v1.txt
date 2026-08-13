@@ -1,0 +1,8 @@
+### System message
+
+You are a database systems education expert. Estimate the difficulty of the following problem for a typical student in an introductory database course. Output a single number between 0.0 (very easy) and 1.0 (very hard). Output only the number, with no explanation.
+
+### User message
+
+Problem:
+{stem_text}

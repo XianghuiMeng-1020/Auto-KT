@@ -1,0 +1,236 @@
+{
+  "protocol_id": "TLT3D_PROTOCOL_FREEZE",
+  "version": "1.0.0",
+  "phase": "TLT3D_P1",
+  "status": "FROZEN_PENDING_PI_GATE",
+  "frozen_at_utc": "2026-08-12T12:54:11.858051+00:00",
+  "base_commit": "05c854fe5bc0e40361540da7053317af3ebed3e0",
+  "phase0_audit_commit": "6679cf66ed0cc99ded2525d564c4249611cd1cc0",
+  "amendment_policy": {
+    "silent_modification_forbidden": true,
+    "requires": [
+      "new_version",
+      "reason",
+      "timestamp",
+      "PI_approval",
+      "before_or_after_result_statement"
+    ]
+  },
+  "datasets": {
+    "locked": [
+      "XES3G5M",
+      "Junyi Academy",
+      "DBE-KT22"
+    ],
+    "permanently_not_used": [
+      "MoocRadar",
+      "BePKT",
+      "ASSISTments 2016",
+      "KARL",
+      "Eedi NeurIPS 2020",
+      "MOOCCubeX",
+      "CodeBench"
+    ],
+    "no_further_dataset_hunting": true
+  },
+  "dbe": {
+    "raw_items": 212,
+    "text_complete_items": 166,
+    "eligible_primary_items": 166,
+    "learners_in_universe": 1253,
+    "eligible_learners_min10": 1120,
+    "interactions_on_text_complete": 127098,
+    "learner_split_hash": "65d13de13e7c3a8b366c63628cab3e7ef3f2a67b8eae7cde1aab4e1a53d627dc",
+    "item_universe_hash": "d62fb95604bac94e65adda498dc21175e66ce75198836996f5f53695c96e38a6",
+    "unseen_fold_hash": "28efbf33c231772a3565056367c4bf6dfa62bdf553abcfd8397aa9d9037d4e0a",
+    "fold_sizes": {
+      "0": 34,
+      "1": 33,
+      "2": 33,
+      "3": 33,
+      "4": 33
+    },
+    "llm_scores_present": false,
+    "correctness_source_of_record": "Transaction.answer_state",
+    "correctness_disagreements_vs_choice": 704,
+    "rq2_response_view": "FIRST_OBSERVED_LEARNER_ITEM",
+    "kt_event_view": "ALL_TIMESTAMPED_INTERACTIONS",
+    "expert_difficulty_role": "SECONDARY_CONSTRUCT_ONLY",
+    "kc_policy": "NOT_CONSUMED_BY_CURRENT_GRU_SAKT_FORWARD"
+  },
+  "learner_split": {
+    "algorithm": "unified_schema_common.split_students_deterministic",
+    "ratios": {
+      "train": 0.7,
+      "val": 0.1,
+      "test": 0.2
+    },
+    "split_seed": 2024,
+    "min_student_interactions": 10,
+    "hash_salt": "autokt-jla-v1"
+  },
+  "item_eligibility": {
+    "primary_threshold_held_out_test_responses": 20,
+    "dbe_view": "FIRST_OBSERVED_LEARNER_ITEM",
+    "stop_if_eligible_lt": 150
+  },
+  "llm_scoring": {
+    "models": [
+      "gpt-4o-mini",
+      "gpt-5.4"
+    ],
+    "no_new_models": true,
+    "score_scale": {
+      "min": 0.0,
+      "max": 1.0,
+      "precision": "parsed_float",
+      "orientation": "larger_more_difficult"
+    },
+    "confirmatory_replication": "deterministic_only_T0_seed2024",
+    "prompt_class": "MATH_SPECIFIC",
+    "prompt_protocol_recommendation": "OPTION_2_DOMAIN_PARAMETERIZED_DBE_KEEP_EXISTING_MATH_SCORES",
+    "pi_decision_required_before_api": true,
+    "no_api_calls_in_phase1": true,
+    "system_prompt_hash_source": "protocol/LLM_DIFFICULTY_PROMPT_FREEZE.md",
+    "user_template": "Problem:\\n{stem_text}"
+  },
+  "rq1": {
+    "contract": "configs/tlt3d/rq1_feature_contract.json",
+    "expert_difficulty_in_primary_transparent": false
+  },
+  "rq2": {
+    "primary": {
+      "estimator": "Spearman",
+      "criterion": "held_out_learner_error",
+      "dbe_response_view": "FIRST_OBSERVED_LEARNER_ITEM",
+      "smoothing": "Beta(1,1)=(e+1)/(n+2)",
+      "bootstrap_replicates": 500,
+      "bootstrap_seed": 2024,
+      "ci_type": "percentile_bootstrap_item_resample",
+      "threshold": 20
+    },
+    "incremental": {
+      "baseline": "transparent_item_features",
+      "augmented": "transparent_plus_one_LLM",
+      "model": "Ridge(alpha=1.0)+StandardScaler",
+      "oof": "KFold(5,shuffle=True,random_state=2024)",
+      "primary_metric": "incremental_r2_vs_A",
+      "secondary_metrics": [
+        "oof_rmse",
+        "oof_mae"
+      ]
+    },
+    "no_naive_pooled_spearman_across_datasets": true
+  },
+  "rq3": {
+    "status": "EXISTING_CONTROLLED_SIMULATION_ONLY",
+    "no_dbe_simulation": true,
+    "no_xes_junyi_rerun_unless_repro_fail": true
+  },
+  "rq4_response_limited": {
+    "config": "configs/tlt3d/response_limited_dbe.json",
+    "status": "FROZEN_SPEC_NOT_RUN",
+    "primary_metric": "log_loss",
+    "secondary_metrics": [
+      "auc",
+      "brier",
+      "ece",
+      "accuracy"
+    ]
+  },
+  "rq4_genuine_unseen": {
+    "n_folds": 5,
+    "item_fold_seed": 2024,
+    "evaluation_unit": "first_learner_x_target_item_interaction",
+    "unk_item": true,
+    "leakage_forbidden": [
+      "train_interactions_with_target",
+      "target_empirical_response_stats",
+      "private_target_item_embedding",
+      "target_outcomes_in_val_model_selection"
+    ],
+    "conditions": [
+      "Standard",
+      "LLM-Mini",
+      "LLM-5.4",
+      "Random-Scalar",
+      "CharacterLength"
+    ],
+    "seeds": [
+      2024,
+      42,
+      123,
+      456,
+      789
+    ]
+  },
+  "controls": {
+    "random": {
+      "pre_llm_placeholder": "Uniform[0,1] fixed per item seed=2024",
+      "limited_kt_after_scores": "resample_from_gpt4o_mini_marginals",
+      "coldstart_after_scores": "permute_gpt4o_mini_scores"
+    },
+    "character_length": {
+      "transform": "min_max_char_length_over_universe",
+      "generated_before_llm": true
+    }
+  },
+  "distinctive_value_rule": "configs/tlt3d/distinctive_value_rule.json",
+  "statistical_families": {
+    "A": "authentic_learner_correspondence",
+    "B": "incremental_information",
+    "C": "response_limited_KT",
+    "D": "genuine_unseen_item_KT",
+    "recommendation": "OPTION_2_HOLM_WITHIN_FAMILY_ACROSS_THREE_DATASETS",
+    "pi_decision_required": true,
+    "effect_size_first": true
+  },
+  "seeds": {
+    "split_seed": 2024,
+    "item_fold_seed": 2024,
+    "mask_seed": 2024,
+    "bootstrap_seed": 2024,
+    "kt_train_seeds": [
+      2024,
+      42,
+      123,
+      456,
+      789
+    ],
+    "llm_det_seed": 2024
+  },
+  "stop_failure_rules": [
+    "eligible_primary_items < 150 under authoritative split",
+    "unseen_targets < 100",
+    "unresolved_prompt_construct_mismatch",
+    "leakage_tests_fail",
+    "correctness_disagreement_unresolved_if_PI_requires_zero"
+  ],
+  "prohibited_post_hoc": [
+    "threshold_adaptation_from_DBE_results",
+    "new_handcrafted_baselines_after_DBE_scores",
+    "results_dependent_subgroup_selection",
+    "naive_pooled_spearman",
+    "silent_protocol_file_edits",
+    "model_identifier_upgrades",
+    "metric_primary_switching_from_DBE_behavior"
+  ],
+  "remaining_pi_decisions": [
+    "PROMPT_PROTOCOL Option1 vs Option2",
+    "STATISTICAL_FAMILY Option1 vs Option2",
+    "Acknowledge DBE RQ2 FIRST_OBSERVED vs XES/Junyi V2 all-response aggregation",
+    "Acknowledge 704 answer_state vs choice disagreements"
+  ],
+  "gates": {
+    "P1_pipeline_alignment": "PASS_WITH_DISCLOSED_MISMATCHES",
+    "P2_dbe_canonical_text": "PASS",
+    "P3_dbe_learner_split": "PASS",
+    "P4_eligible_ge_150": "PASS",
+    "P5_unseen_targets_ge_100": "PASS",
+    "P6_prompt_compatibility": "PENDING_PI",
+    "P7_controls_frozen": "PASS",
+    "P8_statistical_families": "PENDING_PI",
+    "P9_no_leakage": "PASS_VIA_TESTS",
+    "P10_no_new_result": "PASS"
+  }
+}

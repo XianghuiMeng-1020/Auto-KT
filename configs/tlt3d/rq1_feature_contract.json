@@ -1,0 +1,45 @@
+{
+  "phase": "TLT3D_P1",
+  "principle": "Characterize LLM difficulty association with visible item surface features before interpreting as learner difficulty.",
+  "source_implementation": "scripts/analysis/measurement_common.py::extract_surface_features",
+  "frozen_numeric_features": [
+    "char_length",
+    "token_length",
+    "sentence_count",
+    "number_count",
+    "math_symbol_count",
+    "equation_count",
+    "answer_option_count",
+    "concept_count"
+  ],
+  "frozen_categorical_features": [
+    "has_image_dependency",
+    "item_format",
+    "mathematical_domain",
+    "educational_level",
+    "language",
+    "item_content_type"
+  ],
+  "exposure_feature": "log_train_exposure = log1p(train_responses) [NOT for genuine unseen targets]",
+  "dbe_mapping": {
+    "char_length": "len(scoring_text)",
+    "token_length": "whitespace tokens of scoring_text",
+    "answer_option_count": "n_choices from Question_Choices",
+    "number_count": "regex digits in scoring_text",
+    "math_symbol_count": "symbol regex (may be sparse for DB content)",
+    "equation_count": "equality-symbol count",
+    "language": "en",
+    "item_format": "multiple_choice",
+    "mathematical_domain": "NOT_APPLICABLE_USE_domain=database_systems_as_metadata_only",
+    "concept_count": "optional count of Question_KC_Relationships; NOT used in primary transparent baseline unless PI approves",
+    "has_image_dependency": "false for PASS_TEXT_COMPLETE universe"
+  },
+  "explicitly_excluded_from_primary_transparent_baseline": [
+    "expert_difficulty",
+    "difficulty_feedback",
+    "trust_feedback",
+    "response_count",
+    "acceptance_rate",
+    "learner_error"
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "protocol_id": "TLT3D_PROTOCOL_FREEZE",
+  "version": "1.1.0",
+  "phase": "TLT3D_P1",
+  "status": "FROZEN_PENDING_PI_GATE_ON_FAMILY_C_D",
+  "frozen_at_utc": "2026-08-12T12:54:11.858051+00:00",
+  "base_commit": "05c854fe5bc0e40361540da7053317af3ebed3e0",
+  "phase0_audit_commit": "6679cf66ed0cc99ded2525d564c4249611cd1cc0",
+  "amendment_policy": {
+    "silent_modification_forbidden": true,
+    "requires": [
+      "new_version",
+      "reason",
+      "timestamp",
+      "PI_approval",
+      "before_or_after_result_statement"
+    ]
+  },
+  "datasets": {
+    "locked": [
+      "XES3G5M",
+      "Junyi Academy",
+      "DBE-KT22"
+    ],
+    "permanently_not_used": [
+      "MoocRadar",
+      "BePKT",
+      "ASSISTments 2016",
+      "KARL",
+      "Eedi NeurIPS 2020",
+      "MOOCCubeX",
+      "CodeBench"
+    ],
+    "no_further_dataset_hunting": true
+  },
+  "dbe": {
+    "raw_items": 212,
+    "text_complete_items": 166,
+    "eligible_primary_items": 166,
+    "learners_in_universe": 1253,
+    "eligible_learners_min10": 1120,
+    "interactions_on_text_complete": 127098,
+    "learner_split_hash": "65d13de13e7c3a8b366c63628cab3e7ef3f2a67b8eae7cde1aab4e1a53d627dc",
+    "item_universe_hash": "d62fb95604bac94e65adda498dc21175e66ce75198836996f5f53695c96e38a6",
+    "unseen_fold_hash": "28efbf33c231772a3565056367c4bf6dfa62bdf553abcfd8397aa9d9037d4e0a",
+    "fold_sizes": {
+      "0": 34,
+      "1": 33,
+      "2": 33,
+      "3": 33,
+      "4": 33
+    },
+    "llm_scores_present": false,
+    "correctness_source_of_record": "answer_state",
+    "correctness_disagreements_vs_choice": 704,
+    "rq2_response_view": "FIRST_OBSERVED_LEARNER_ITEM",
+    "kt_event_view": "ALL_TIMESTAMPED_INTERACTIONS",
+    "expert_difficulty_role": "SECONDARY_CONSTRUCT_ONLY",
+    "kc_policy": "NOT_CONSUMED_BY_CURRENT_GRU_SAKT_FORWARD",
+    "DBE_CORRECTNESS_GATE": "PASS_WITH_SENSITIVITY",
+    "consensus_only_role": "SECONDARY_SENSITIVITY"
+  },
+  "learner_split": {
+    "algorithm": "unified_schema_common.split_students_deterministic",
+    "ratios": {
+      "train": 0.7,
+      "val": 0.1,
+      "test": 0.2
+    },
+    "split_seed": 2024,
+    "min_student_interactions": 10,
+    "hash_salt": "autokt-jla-v1"
+  },
+  "item_eligibility": {
+    "primary_threshold_held_out_test_responses": 20,
+    "dbe_view": "FIRST_OBSERVED_LEARNER_ITEM",
+    "stop_if_eligible_lt": 150
+  },
+  "llm_scoring": {
+    "models": [
+      "gpt-4o-mini",
+      "gpt-5.4"
+    ],
+    "no_new_models": true,
+    "score_scale": {
+      "min": 0.0,
+      "max": 1.0,
+      "precision": "parsed_float",
+      "orientation": "larger_more_difficult"
+    },
+    "confirmatory_replication": "deterministic_only_T0_seed2024",
+    "prompt_class": "MATH_SPECIFIC",
+    "prompt_protocol_recommendation": "OPTION_2_DOMAIN_PARAMETERIZED_DBE_KEEP_EXISTING_MATH_SCORES",
+    "pi_decision_required_before_api": true,
+    "no_api_calls_in_phase1": true,
+    "system_prompt_hash_source": "protocol/LLM_DIFFICULTY_PROMPT_FREEZE.md",
+    "user_template": "Problem:\\n{stem_text}",
+    "prompt_strategy": "OPTION_2_DOMAIN_PARAMETERIZED_DBE_KEEP_EXISTING_MATH_SCORES",
+    "prompt_class_xes_junyi": "MATH_SPECIFIC",
+    "prompt_class_dbe": "DOMAIN_PARAMETERIZED_TWIN",
+    "dbe_prompt_file": "configs/tlt3d/dbe_prompt_v1.txt",
+    "math_prompt_hash": "f47c02a4cc4a15f46f280908c13ba2ebacfefe36dc7307eb3c18ca1695efa165",
+    "dbe_prompt_hash": "d99a9645219033e713bb78fd31dc3d74826bf31adf1a0e5977f30fcbda911c35",
+    "confirmatory_calls_per_item_per_model": 1,
+    "deterministic": true,
+    "CONFIRMATORY_LLM_SCORING": "DETERMINISTIC_SINGLE_SCORE_PER_ITEM_PER_MODEL",
+    "obsolete_four_call_confirmatory_table": "SUPERSEDED_BY_AMENDMENT_010",
+    "prompt_pi_decision": "OPTION_2_APPROVED"
+  },
+  "rq1": {
+    "contract": "configs/tlt3d/rq1_feature_contract.json",
+    "expert_difficulty_in_primary_transparent": false
+  },
+  "rq2": {
+    "primary": {
+      "estimator": "Spearman",
+      "criterion": "held_out_learner_error",
+      "dbe_response_view": "FIRST_OBSERVED_LEARNER_ITEM",
+      "smoothing": "Beta(1,1)=(e+1)/(n+2)",
+      "bootstrap_replicates": 500,
+      "bootstrap_seed": 2024,
+      "ci_type": "percentile_bootstrap_item_resample",
+      "threshold": 20,
+      "harmonized_response_view_all_datasets": "FIRST_OBSERVED_LEARNER_ITEM",
+      "legacy_all_response_label": "LEGACY_ALL_RESPONSE_SENSITIVITY",
+      "harmonized_eligible_ge20": {
+        "xes3g5m": 3265,
+        "junyi": 169,
+        "dbe_kt22": 166
+      }
+    },
+    "incremental": {
+      "baseline": "shared_core_transparent_features",
+      "augmented": "transparent_plus_one_LLM",
+      "model": "Ridge(alpha=1.0)+StandardScaler",
+      "oof": "KFold(5,shuffle=True,random_state=2024)",
+      "primary_metric": "incremental_r2_vs_A",
+      "secondary_metrics": [
+        "oof_rmse",
+        "oof_mae"
+      ],
+      "shared_core_contract": "configs/tlt3d/rq2_shared_core_features.json",
+      "concept_count": "SECONDARY_METADATA_FEATURE"
+    },
+    "no_naive_pooled_spearman_across_datasets": true
+  },
+  "rq3": {
+    "status": "EXISTING_CONTROLLED_SIMULATION_ONLY",
+    "no_dbe_simulation": true,
+    "no_xes_junyi_rerun_unless_repro_fail": true
+  },
+  "rq4_response_limited": {
+    "config": "configs/tlt3d/response_limited_dbe.json",
+    "status": "FROZEN_SPEC_NOT_RUN",
+    "primary_metric": "log_loss",
+    "secondary_metrics": [
+      "auc",
+      "brier",
+      "ece",
+      "accuracy"
+    ]
+  },
+  "rq4_genuine_unseen": {
+    "n_folds": 5,
+    "item_fold_seed": 2024,
+    "evaluation_unit": "first_learner_x_target_item_interaction",
+    "unk_item": true,
+    "leakage_forbidden": [
+      "train_interactions_with_target",
+      "target_empirical_response_stats",
+      "private_target_item_embedding",
+      "target_outcomes_in_val_model_selection"
+    ],
+    "conditions": [
+      "Standard",
+      "LLM-Mini",
+      "LLM-5.4",
+      "Random-Scalar",
+      "CharacterLength"
+    ],
+    "seeds": [
+      2024,
+      42,
+      123,
+      456,
+      789
+    ]
+  },
+  "controls": {
+    "RESPONSE_LIMITED_GRU_CHARACTER_LENGTH": "NOT_IN_EXISTING_GRID",
+    "GENUINE_UNSEEN_CHARACTER_LENGTH": "INCLUDED",
+    "random_mechanisms": {
+      "Random-ResampledScore": "response-limited; resample Mini; mask_seed=2024",
+      "Random-PermutedScore": "unseen cold-start; permute Mini; mask_seed=2024",
+      "Random-Uniform01-PreLLM": "DBE pre-LLM placeholder only"
+    },
+    "do_not_imply_same_draw_across_settings": true
+  },
+  "distinctive_value_rule": "configs/tlt3d/distinctive_value_rule.json",
+  "statistical_families": {
+    "A": "authentic_learner_correspondence",
+    "B": "incremental_information",
+    "C": "response_limited_KT",
+    "D": "genuine_unseen_item_KT",
+    "recommendation": "OPTION_2_HOLM_WITHIN_FAMILY_ACROSS_THREE_DATASETS",
+    "pi_decision_required": true,
+    "effect_size_first": true,
+    "pi_decision": "OPTION_2_APPROVED",
+    "registry": "configs/tlt3d/confirmatory_family_registry.json",
+    "family_A_status": "FROZEN",
+    "family_B_status": "FROZEN",
+    "family_C_status": "PI_REVIEW_REQUIRED",
+    "family_D_status": "PI_REVIEW_REQUIRED"
+  },
+  "seeds": {
+    "split_seed": 2024,
+    "item_fold_seed": 2024,
+    "mask_seed": 2024,
+    "bootstrap_seed": 2024,
+    "kt_train_seeds": [
+      2024,
+      42,
+      123,
+      456,
+      789
+    ],
+    "llm_det_seed": 2024
+  },
+  "stop_failure_rules": [
+    "eligible_primary_items < 150 under authoritative split",
+    "unseen_targets < 100",
+    "unresolved_prompt_construct_mismatch",
+    "leakage_tests_fail",
+    "correctness_disagreement_unresolved_if_PI_requires_zero"
+  ],
+  "prohibited_post_hoc": [
+    "threshold_adaptation_from_DBE_results",
+    "new_handcrafted_baselines_after_DBE_scores",
+    "results_dependent_subgroup_selection",
+    "naive_pooled_spearman",
+    "silent_protocol_file_edits",
+    "model_identifier_upgrades",
+    "metric_primary_switching_from_DBE_behavior"
+  ],
+  "remaining_pi_decisions": [
+    "Family C Option C1 vs C2",
+    "Family D Option D1 vs D2",
+    "Acknowledge Junyi FO vs LEGACY material divergence",
+    "Optional deeper DBE disagreement root-cause"
+  ],
+  "gates": {
+    "P1_pipeline_alignment": "PASS_WITH_DISCLOSED_MISMATCHES",
+    "P2_dbe_canonical_text": "PASS",
+    "P3_dbe_learner_split": "PASS",
+    "P4_eligible_ge_150": "PASS",
+    "P5_unseen_targets_ge_100": "PASS",
+    "P6_prompt_compatibility": "PENDING_PI",
+    "P7_controls_frozen": "PASS",
+    "P8_statistical_families": "PENDING_PI",
+    "P9_no_leakage": "PASS_VIA_TESTS",
+    "P10_no_new_result": "PASS"
+  },
+  "amends": "1.0.0",
+  "amendment_commit_parent": "b93dbc95ca47f78d02eb1aa481e93c45b3298d36",
+  "amended_at_utc": "2026-08-12T18:58:16.760829+00:00",
+  "amendment_before_dbe_llm_scoring": true,
+  "dbe_llm_scores_available_at_amendment": false,
+  "NO_RAW_SCORE_POOLING_ACROSS_DATASETS": true,
+  "gates_p11": {
+    "A1": "PASS",
+    "A2": "PASS_WITH_JUNYI_CONSTRUCT_ALARM",
+    "A3": "PASS",
+    "A4": "PASS_WITH_SENSITIVITY",
+    "A5": "PASS",
+    "A6": "PASS",
+    "A7": "PASS",
+    "A8": "PI_REVIEW_REQUIRED",
+    "A9": "PI_REVIEW_REQUIRED",
+    "A10": "PASS",
+    "A11": "PASS"
+  }
+}

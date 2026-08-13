@@ -1,0 +1,4 @@
+dataset,raw_full,text_scoreable,llm_scored,rq2_first_observed_primary,rq2_legacy_all_response,response_limited_universe,unseen_target_universe,notes,source
+xes3g5m,7618,5363,5363,3265,3279.0,5363,5363,Do not call 7618 eligible/text-scoreable,reports/TLT3D_P11_DATASET_UNIVERSE_RECONCILIATION.md
+junyi,666,190,190,169,183.0,190,190,Do not call 666 eligible/text-scoreable; FO vs legacy material,reports/TLT3D_P11_DATASET_UNIVERSE_RECONCILIATION.md
+dbe_kt22,212,166,166,166,,166,166,text-complete=LLM-scored=FO=unseen targets=166,configs/tlt3d/dbe_item_universe.json; artifacts/tlt3d/DBE_PRE_LLM_FREEZE.json

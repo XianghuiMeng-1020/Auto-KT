@@ -1,0 +1,53 @@
+{
+  "amendment_id": "POST_RESULT_OPERATIONALIZATION_REPAIR_002",
+  "timing": "after_existing_xes_junyi_exposure_results_before_dbe_limited_training",
+  "reason": "family_C_cross_exposure_aggregation_was_unspecified",
+  "family": "C",
+  "backbone": "GRU",
+  "confirmatory_exposures": [
+    0,
+    1,
+    3,
+    5,
+    10,
+    20
+  ],
+  "warm_confirmatory": false,
+  "effect": "comparator_log_loss_minus_llm_log_loss",
+  "within_seed_aggregation": "unweighted_mean_across_confirmatory_exposures",
+  "exposure_weight": "1/6 each",
+  "seed_unit": true,
+  "seeds": [
+    2024,
+    42,
+    123,
+    456,
+    789
+  ],
+  "inferential_test": "two_sided_one_sample_t_test_on_seed_mean_deltas",
+  "sidedness": "two_sided",
+  "df": 4,
+  "family_size": 12,
+  "multiplicity": "holm_within_family_C",
+  "scientific_inputs_changed": false,
+  "dbe_training_started_before_amendment": false,
+  "sakt_limited_classification": "SECONDARY",
+  "train_empdiff_classification": "SECONDARY_MECHANISM",
+  "oracle_empdiff_classification": "SECONDARY_ORACLE",
+  "random_alias": {
+    "legacy_artifact_name": "Random-Scalar",
+    "frozen_protocol_name": "Random-ResampledScore",
+    "scalar_source": "random_matched",
+    "mechanism": "np.random.default_rng(mask_seed).choice(mini_vals, size=n_items, replace=True)",
+    "mask_seed": 2024,
+    "source_score": "gpt-4o-mini scalar_difficulty marginal",
+    "identity_verified": true,
+    "evidence": [
+      "scripts/kt/limited_kt_config.json conditions.Random-Scalar.scalar_source=random_matched",
+      "scripts/kt/limited_kt_common.py build_scalar_maps random_matched branch",
+      "reports/TLT3D_P11_RANDOM_CONTROL_AUDIT.md Random-ResampledScore"
+    ]
+  },
+  "status": "POST_RESULT_TRANSPARENT_OPERATIONALIZATION_REPAIR",
+  "generated_at_utc": "2026-08-13T03:05:46.760099+00:00"
+}

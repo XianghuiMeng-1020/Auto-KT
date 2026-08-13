@@ -1,0 +1,158 @@
+{
+  "LLM_BETTER": [
+    {
+      "ID": "D1_XES_SAKT_Mini_vs_RandPermute",
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "LLM": "gpt-4o-mini",
+      "comparator": "Random-PermutedScore",
+      "effect_log_loss": 0.0004384719267379,
+      "CI_lo": 0.0002812160502612,
+      "CI_hi": 0.0005957278032146,
+      "raw_p": 0.0014997716168889,
+      "holm_p": 0.0479926917404473,
+      "effect_direction": "LLM_BETTER",
+      "holm_supported": true,
+      "llm_better_or_worse": "better",
+      "hypothesis_membership_status": "PRE_RESULT_FROZEN",
+      "operationalization_status": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "source_artifact": "artifacts/tlt3d/family_D_confirmatory_results.csv",
+      "source_sha256": "f3aef569f5073a09d113d6187d4d273ff692ee7212297986d7e21036fda3bb38"
+    },
+    {
+      "ID": "D1_XES_SAKT_5.4_vs_RandPermute",
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "LLM": "gpt-5.4",
+      "comparator": "Random-PermutedScore",
+      "effect_log_loss": 0.0006650360187902,
+      "CI_lo": 0.0005294654015878,
+      "CI_hi": 0.0008006066359927,
+      "raw_p": 0.0001682779607895,
+      "holm_p": 0.0057214506668447,
+      "effect_direction": "LLM_BETTER",
+      "holm_supported": true,
+      "llm_better_or_worse": "better",
+      "hypothesis_membership_status": "PRE_RESULT_FROZEN",
+      "operationalization_status": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "source_artifact": "artifacts/tlt3d/family_D_confirmatory_results.csv",
+      "source_sha256": "f3aef569f5073a09d113d6187d4d273ff692ee7212297986d7e21036fda3bb38"
+    },
+    {
+      "ID": "D1_XES_SAKT_5.4_vs_CharLen",
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "LLM": "gpt-5.4",
+      "comparator": "CharacterLength",
+      "effect_log_loss": 0.0005205790798231,
+      "CI_lo": 0.0004406708046236,
+      "CI_hi": 0.0006004873550227,
+      "raw_p": 5.493092006744456e-05,
+      "holm_p": 0.001977513122428,
+      "effect_direction": "LLM_BETTER",
+      "holm_supported": true,
+      "llm_better_or_worse": "better",
+      "hypothesis_membership_status": "PRE_RESULT_FROZEN",
+      "operationalization_status": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "source_artifact": "artifacts/tlt3d/family_D_confirmatory_results.csv",
+      "source_sha256": "f3aef569f5073a09d113d6187d4d273ff692ee7212297986d7e21036fda3bb38"
+    }
+  ],
+  "LLM_WORSE": [
+    {
+      "ID": "D1_Junyi_GRU_5.4_vs_RandPermute",
+      "dataset": "junyi",
+      "backbone": "GRU",
+      "LLM": "gpt-5.4",
+      "comparator": "Random-PermutedScore",
+      "effect_log_loss": -0.0017697565916663,
+      "CI_lo": -0.0020485755760325,
+      "CI_hi": -0.0014909376073,
+      "raw_p": 6.089261796907989e-05,
+      "holm_p": 0.0021312416289177,
+      "effect_direction": "LLM_WORSE",
+      "holm_supported": true,
+      "llm_better_or_worse": "worse",
+      "hypothesis_membership_status": "PRE_RESULT_FROZEN",
+      "operationalization_status": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "source_artifact": "artifacts/tlt3d/family_D_confirmatory_results.csv",
+      "source_sha256": "f3aef569f5073a09d113d6187d4d273ff692ee7212297986d7e21036fda3bb38"
+    },
+    {
+      "ID": "D1_Junyi_SAKT_5.4_vs_CharLen",
+      "dataset": "junyi",
+      "backbone": "SAKT",
+      "LLM": "gpt-5.4",
+      "comparator": "CharacterLength",
+      "effect_log_loss": -0.0037035696418273,
+      "CI_lo": -0.0048658364282241,
+      "CI_hi": -0.0025413028554306,
+      "raw_p": 0.0009012030298282,
+      "holm_p": 0.0297396999843309,
+      "effect_direction": "LLM_WORSE",
+      "holm_supported": true,
+      "llm_better_or_worse": "worse",
+      "hypothesis_membership_status": "PRE_RESULT_FROZEN",
+      "operationalization_status": "POST_RESULT_OPERATIONALIZATION_REPAIR_003",
+      "source_artifact": "artifacts/tlt3d/family_D_confirmatory_results.csv",
+      "source_sha256": "f3aef569f5073a09d113d6187d4d273ff692ee7212297986d7e21036fda3bb38"
+    }
+  ],
+  "positive_holm_supported_count": 3,
+  "negative_holm_supported_count": 2,
+  "positive_triplet_checks": [
+    {
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "LLM": "gpt-4o-mini",
+      "supported_comparator": "Random-PermutedScore",
+      "effect": 0.0004384719267379,
+      "CI": [
+        0.0002812160502612,
+        0.0005957278032146
+      ],
+      "holm_p": 0.0479926917404473,
+      "clears_Standard": false,
+      "clears_Random": true,
+      "clears_CharacterLength": false,
+      "full_triplet_cleared": false,
+      "distinctive": false
+    },
+    {
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "LLM": "gpt-5.4",
+      "supported_comparator": "Random-PermutedScore",
+      "effect": 0.0006650360187902,
+      "CI": [
+        0.0005294654015878,
+        0.0008006066359927
+      ],
+      "holm_p": 0.0057214506668447,
+      "clears_Standard": false,
+      "clears_Random": true,
+      "clears_CharacterLength": true,
+      "full_triplet_cleared": false,
+      "distinctive": false
+    },
+    {
+      "dataset": "xes3g5m",
+      "backbone": "SAKT",
+      "LLM": "gpt-5.4",
+      "supported_comparator": "CharacterLength",
+      "effect": 0.0005205790798231,
+      "CI": [
+        0.0004406708046236,
+        0.0006004873550227
+      ],
+      "holm_p": 0.001977513122428,
+      "clears_Standard": false,
+      "clears_Random": true,
+      "clears_CharacterLength": true,
+      "full_triplet_cleared": false,
+      "distinctive": false
+    }
+  ],
+  "full_distinctive_comparator_triplets_cleared": 0,
+  "overall_verdict": "NO_DISTINCTIVE_SUPPORT"
+}

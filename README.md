@@ -152,3 +152,15 @@ python scripts/build_results.py
 ## 📖 Citation
 
 If you use this code, please cite the associated publication once available. Citation details are intentionally omitted here pending final publication.
+
+
+---
+
+## IEEE TLT journal extension (TLT-3D)
+
+The IEEE Transactions on Learning Technologies manuscript extends this package with
+**DBE-KT22** and a sealed three-dataset confirmatory program (Families A–D), plus
+harmonized first-observed learner evidence. See [`docs/TLT3D_JOURNAL_EXTENSION.md`](docs/TLT3D_JOURNAL_EXTENSION.md).
+
+Frozen confirmatory tables live under `artifacts/tlt3d/FINAL_*`. Sanitized DBE scores
+are in `artifacts/tlt3d/dbe_llm_scores_confirmatory.csv`.
